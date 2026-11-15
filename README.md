@@ -24,7 +24,9 @@ Landing page profesional + plan completo para **vender servicios de desarrollo w
 │   ├── 03-guiones-venta.md         # Bios, copys, respuestas de WhatsApp, objeciones, seguimiento
 │   ├── 04-tablero-kpis.csv         # Registro semanal de métricas
 │   ├── 05-plantilla-propuesta.md   # Plantilla de cotización para clientes
-│   └── 06-precios.md               # Investigación de mercado (Chimbote/Perú) y tarifas
+│   ├── 06-precios.md               # Investigación de mercado (Chimbote/Perú) y tarifas
+│   └── 07-crear-redes.md           # Guía paso a paso para crear cada red + primeras publicaciones
+├── marca/                          # Logo, portadas, destacadas y publicaciones listas para subir
 └── .github/workflows/pages.yml     # Publicación automática en GitHub Pages
 ```
 
@@ -60,7 +62,6 @@ Cambia `DEMO_CONFIG` en `demos/demo-banner.js` con tu nombre y WhatsApp. Cada de
 
 ## 🗺️ Siguientes mejoras sugeridas
 
-- [ ] Reemplazar `img/og-cover.svg` por un PNG 1200×630 (Facebook no muestra SVG en vistas previas).
 - [ ] Agregar Meta Pixel y Google Analytics 4.
 - [ ] Versión Laravel con formulario que guarde leads en base de datos y panel para gestionarlos.
 - [ ] Dominio propio (ej. `tunombre.dev`).
