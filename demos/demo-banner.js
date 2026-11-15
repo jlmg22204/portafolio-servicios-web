@@ -3,7 +3,7 @@
 const DEMO_CONFIG = {
   autor: 'TuNombre',
   // WhatsApp de destino para los pedidos/citas de los demos (formato internacional sin "+")
-  whatsapp: '5210000000000',
+  whatsapp: '51913718392',
   portafolio: '../../index.html#portafolio',
 };
 

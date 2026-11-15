@@ -2,8 +2,8 @@
    CONFIGURACIÓN — cambia estos datos por los tuyos
    ========================================================= */
 const CONFIG = {
-  // Número de WhatsApp en formato internacional, sin "+" ni espacios. Ej: 5215512345678
-  whatsapp: '5210000000000',
+  // Número de WhatsApp en formato internacional, sin "+" ni espacios (Perú: 51 + 9 dígitos)
+  whatsapp: '51913718392',
   saludo: 'Hola, vi tu trabajo en redes y me interesa una cotización.',
 };
 
