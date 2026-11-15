@@ -1,10 +1,10 @@
 const SERVICES = [
-  { id: 'valoracion', icon: '🩺', name: 'Valoración general', desc: 'Revisión completa, diagnóstico y plan de tratamiento.', min: 30, price: 350 },
-  { id: 'limpieza', icon: '✨', name: 'Limpieza dental', desc: 'Profilaxis con ultrasonido y pulido.', min: 45, price: 650 },
-  { id: 'resina', icon: '🦷', name: 'Resinas (caries)', desc: 'Restauraciones del color de tu diente.', min: 60, price: 800 },
-  { id: 'ortodoncia', icon: '😬', name: 'Ortodoncia', desc: 'Brackets y alineadores invisibles.', min: 30, price: 500 },
-  { id: 'blanqueamiento', icon: '💎', name: 'Blanqueamiento', desc: 'Resultados visibles en una sesión.', min: 90, price: 3200 },
-  { id: 'urgencia', icon: '🚑', name: 'Urgencia dental', desc: 'Dolor, fractura o inflamación.', min: 30, price: 500 },
+  { id: 'valoracion', icon: '🩺', name: 'Valoración general', desc: 'Revisión completa, diagnóstico y plan de tratamiento.', min: 30, price: 50 },
+  { id: 'limpieza', icon: '✨', name: 'Limpieza dental', desc: 'Profilaxis con ultrasonido y pulido.', min: 45, price: 120 },
+  { id: 'resina', icon: '🦷', name: 'Resinas (caries)', desc: 'Restauraciones del color de tu diente.', min: 60, price: 150 },
+  { id: 'ortodoncia', icon: '😬', name: 'Ortodoncia', desc: 'Brackets y alineadores invisibles.', min: 30, price: 80 },
+  { id: 'blanqueamiento', icon: '💎', name: 'Blanqueamiento', desc: 'Resultados visibles en una sesión.', min: 90, price: 600 },
+  { id: 'urgencia', icon: '🚑', name: 'Urgencia dental', desc: 'Dolor, fractura o inflamación.', min: 30, price: 90 },
 ];
 const DOCTORS = [
   { id: 'any', name: 'Cualquier especialista disponible', emoji: '🧑‍⚕️', role: '' },
@@ -18,7 +18,7 @@ const STORE = 'sonrie-citas';
 
 const $ = (s) => document.querySelector(s);
 const state = { svc: null, doctor: 'any', date: null, time: null };
-const fmtDate = (d) => d.toLocaleDateString('es-MX', { weekday: 'long', day: 'numeric', month: 'long' });
+const fmtDate = (d) => d.toLocaleDateString('es-PE', { weekday: 'long', day: 'numeric', month: 'long' });
 const key = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 
 function booked() { try { return JSON.parse(localStorage.getItem(STORE)) || []; } catch { return []; } }
@@ -44,13 +44,13 @@ function slotsFor(date) {
 /* ---------- Render ---------- */
 $('#services').innerHTML = SERVICES.map((s) => `
   <article class="svc"><div class="svc__i">${s.icon}</div><h3>${s.name}</h3><p>${s.desc}</p>
-  <div class="svc__meta"><span>⏱ ${s.min} min</span><span>desde $${s.price.toLocaleString('es-MX')}</span></div></article>`).join('');
+  <div class="svc__meta"><span>⏱ ${s.min} min</span><span>desde S/ ${s.price.toLocaleString('es-PE')}</span></div></article>`).join('');
 
 $('#team').innerHTML = DOCTORS.slice(1).map((d) => `
   <article class="doc"><div class="doc__img">${d.emoji}</div><div class="doc__b"><h3>${d.name}</h3><p>${d.role}</p></div></article>`).join('');
 
 $('#svc-opts').innerHTML = SERVICES.map((s) => `
-  <button type="button" class="opt" data-svc="${s.id}"><span style="font-size:1.5rem">${s.icon}</span><span><b>${s.name}</b><small>${s.min} min · desde $${s.price.toLocaleString('es-MX')}</small></span></button>`).join('');
+  <button type="button" class="opt" data-svc="${s.id}"><span style="font-size:1.5rem">${s.icon}</span><span><b>${s.name}</b><small>${s.min} min · desde S/ ${s.price.toLocaleString('es-PE')}</small></span></button>`).join('');
 
 $('#doctor').innerHTML = DOCTORS.map((d) => `<option value="${d.id}">${d.name}${d.role ? ' — ' + d.role : ''}</option>`).join('');
 
@@ -61,7 +61,7 @@ function renderDays() {
   $('#days').innerHTML = days.map((d) => {
     const free = slotsFor(d).some((s) => !s.disabled);
     return `<button type="button" class="day${state.date === key(d) ? ' sel' : ''}" data-day="${key(d)}" ${free ? '' : 'disabled'}>
-      <small>${d.toLocaleDateString('es-MX', { weekday: 'short' })}</small><b>${d.getDate()}</b><small>${d.toLocaleDateString('es-MX', { month: 'short' })}</small></button>`;
+      <small>${d.toLocaleDateString('es-PE', { weekday: 'short' })}</small><b>${d.getDate()}</b><small>${d.toLocaleDateString('es-PE', { month: 'short' })}</small></button>`;
   }).join('');
   if (!state.date) { const first = $('#days .day:not([disabled])'); if (first) state.date = first.dataset.day, first.classList.add('sel'); }
   renderSlots();

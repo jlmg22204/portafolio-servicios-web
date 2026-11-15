@@ -1,20 +1,20 @@
 const PRODUCTS = [
-  { id: 1, cat: 'Vestidos', name: 'Vestido midi de lino', price: 1290, emoji: '👗', desc: 'Lino 100%, corte cruzado y cinturón desmontable. Fresco y elegante.', colors: [['Arena', '#d8c3a5'], ['Terracota', '#b85c38'], ['Negro', '#222']], sizes: { CH: 3, M: 5, G: 0, XG: 2 }, pop: 10, isNew: true },
-  { id: 2, cat: 'Vestidos', name: 'Vestido camisero rayas', price: 990, old: 1290, emoji: '👗', desc: 'Algodón con rayas finas, botones al frente y bolsas laterales.', colors: [['Azul', '#4a6fa5'], ['Verde', '#6b8f71']], sizes: { CH: 4, M: 1, G: 3 }, pop: 8 },
-  { id: 3, cat: 'Blusas', name: 'Blusa de seda satinada', price: 790, emoji: '👚', desc: 'Caída suave, cuello V y puños con botón.', colors: [['Marfil', '#f3ead8'], ['Champaña', '#e5c9a8'], ['Vino', '#6d213c']], sizes: { CH: 6, M: 6, G: 4 }, pop: 9, isNew: true },
-  { id: 4, cat: 'Blusas', name: 'Top tejido de algodón', price: 490, emoji: '🎽', desc: 'Punto acanalado, ajuste cómodo, básico de temporada.', colors: [['Blanco', '#fff'], ['Café', '#7b5a43']], sizes: { CH: 8, M: 2, G: 5 }, pop: 7 },
-  { id: 5, cat: 'Abrigos', name: 'Trench clásico', price: 2290, emoji: '🧥', desc: 'Gabardina repelente al agua, doble botonadura y cinturón.', colors: [['Camel', '#c19a6b'], ['Negro', '#222']], sizes: { CH: 2, M: 3, G: 1 }, pop: 6 },
-  { id: 6, cat: 'Abrigos', name: 'Saco oversize de lana', price: 1890, old: 2490, emoji: '🧥', desc: 'Mezcla de lana, hombros caídos y forro interior.', colors: [['Gris', '#9ca3af'], ['Avena', '#e8dcc6']], sizes: { M: 2, G: 4 }, pop: 5 },
-  { id: 7, cat: 'Accesorios', name: 'Bolso de piel artesanal', price: 1490, emoji: '👜', desc: 'Piel curtida a mano, correa ajustable, hecho en México.', colors: [['Coñac', '#9a5b2e'], ['Negro', '#222']], sizes: { Único: 7 }, pop: 10 },
-  { id: 8, cat: 'Accesorios', name: 'Sandalias de tiras', price: 890, emoji: '👡', desc: 'Suela acolchada, tacón bajo de 3 cm.', colors: [['Nude', '#e0b99a'], ['Dorado', '#c8a24a']], sizes: { 23: 2, 24: 4, 25: 3, 26: 0 }, pop: 4, isNew: true },
-  { id: 9, cat: 'Accesorios', name: 'Sombrero de palma', price: 590, old: 790, emoji: '👒', desc: 'Palma natural tejida, listón de algodón.', colors: [['Natural', '#e9d8a6']], sizes: { Único: 9 }, pop: 3 },
+  { id: 1, cat: 'Vestidos', name: 'Vestido midi de lino', price: 189, emoji: '👗', desc: 'Lino 100%, corte cruzado y cinturón desmontable. Fresco y elegante.', colors: [['Arena', '#d8c3a5'], ['Terracota', '#b85c38'], ['Negro', '#222']], sizes: { S: 3, M: 5, L: 0, XL: 2 }, pop: 10, isNew: true },
+  { id: 2, cat: 'Vestidos', name: 'Vestido camisero rayas', price: 139, old: 179, emoji: '👗', desc: 'Algodón con rayas finas, botones al frente y bolsas laterales.', colors: [['Azul', '#4a6fa5'], ['Verde', '#6b8f71']], sizes: { S: 4, M: 1, L: 3 }, pop: 8 },
+  { id: 3, cat: 'Blusas', name: 'Blusa de seda satinada', price: 119, emoji: '👚', desc: 'Caída suave, cuello V y puños con botón.', colors: [['Marfil', '#f3ead8'], ['Champaña', '#e5c9a8'], ['Vino', '#6d213c']], sizes: { S: 6, M: 6, L: 4 }, pop: 9, isNew: true },
+  { id: 4, cat: 'Blusas', name: 'Top tejido de algodón pima', price: 69, emoji: '🎽', desc: 'Algodón pima peruano en punto acanalado, suave y fresco.', colors: [['Blanco', '#fff'], ['Café', '#7b5a43']], sizes: { S: 8, M: 2, L: 5 }, pop: 7 },
+  { id: 5, cat: 'Abrigos', name: 'Trench clásico', price: 299, emoji: '🧥', desc: 'Gabardina repelente al agua, doble botonadura y cinturón.', colors: [['Camel', '#c19a6b'], ['Negro', '#222']], sizes: { S: 2, M: 3, L: 1 }, pop: 6 },
+  { id: 6, cat: 'Abrigos', name: 'Saco oversize de alpaca', price: 229, old: 299, emoji: '🧥', desc: 'Mezcla de lana de alpaca, hombros caídos y forro interior.', colors: [['Gris', '#9ca3af'], ['Avena', '#e8dcc6']], sizes: { M: 2, L: 4 }, pop: 5 },
+  { id: 7, cat: 'Accesorios', name: 'Bolso de cuero artesanal', price: 249, emoji: '👜', desc: 'Cuero curtido a mano, correa ajustable, hecho en Perú.', colors: [['Coñac', '#9a5b2e'], ['Negro', '#222']], sizes: { Único: 7 }, pop: 10 },
+  { id: 8, cat: 'Accesorios', name: 'Sandalias de tiras', price: 129, emoji: '👡', desc: 'Suela acolchada, tacón bajo de 3 cm.', colors: [['Nude', '#e0b99a'], ['Dorado', '#c8a24a']], sizes: { 36: 2, 37: 4, 38: 3, 39: 0 }, pop: 4, isNew: true },
+  { id: 9, cat: 'Accesorios', name: 'Sombrero de paja toquilla', price: 79, old: 99, emoji: '👒', desc: 'Paja toquilla tejida a mano, cinta de algodón.', colors: [['Natural', '#e9d8a6']], sizes: { Único: 9 }, pop: 3 },
 ];
 const BG = ['#f2d7c9', '#e8dfd2', '#d9e2d5', '#efe2cf', '#e2dbe8', '#f0e0d6'];
 const COUPONS = { LUA10: 0.10, BIENVENIDA: 0.15 };
-const FREE_SHIP = 999, SHIP = 120;
+const FREE_SHIP = 199, SHIP = 12;
 
 const $ = (s) => document.querySelector(s);
-const money = (n) => '$' + Math.round(n).toLocaleString('es-MX');
+const money = (n) => 'S/ ' + Math.round(n).toLocaleString('es-PE');
 const ls = { get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} } };
 const state = { cat: 'Todo', cart: ls.get('lua-cart', []), favs: ls.get('lua-favs', []), coupon: ls.get('lua-coupon', null), modal: null, drawer: 'cart' };
 const find = (id) => PRODUCTS.find((p) => p.id === +id);
@@ -125,8 +125,8 @@ function renderDrawer() {
       <p class="tot"><span>Total</span><span>${money(t.total)}</span></p></div>
     <form class="co" id="co">
       <input name="nombre" placeholder="Nombre completo" required autocomplete="name">
-      <input name="cp" placeholder="Código postal" required inputmode="numeric" pattern="[0-9]{5}" title="5 dígitos" autocomplete="postal-code">
-      <select name="pago"><option>Tarjeta (link de pago)</option><option>Transferencia</option><option>Pago en OXXO</option></select>
+      <input name="distrito" placeholder="Distrito y ciudad (ej. Miraflores, Lima)" required autocomplete="address-level2">
+      <select name="pago"><option>Yape</option><option>Plin</option><option>Tarjeta (link de pago)</option><option>Transferencia bancaria</option><option>Contraentrega (solo Lima)</option></select>
       <button class="btn btn--wa btn--full">Finalizar compra por WhatsApp</button>
     </form>`;
 }
@@ -185,7 +185,7 @@ document.addEventListener('submit', (e) => {
   const lines = state.cart.map((l) => { const p = find(l.id); return `• ${l.qty} x ${p.name} (${l.color}, ${l.size}) — ${money(p.price * l.qty)}`; });
   const msg = ['🛍️ *Nuevo pedido — LÚA Boutique*', '', ...lines, '', `Subtotal: ${money(t.sub)}`,
     t.disc ? `Descuento (${state.coupon}): -${money(t.disc)}` : '', `Envío: ${t.ship ? money(t.ship) : 'Gratis'}`, `*Total: ${money(t.total)}*`, '',
-    `👤 ${f.nombre}`, `📮 C.P. ${f.cp}`, `💳 ${f.pago}`].filter(Boolean).join('\n');
+    `👤 ${f.nombre}`, `📍 ${f.distrito}`, `💳 ${f.pago}`].filter(Boolean).join('\n');
   window.open(demoWaLink(msg), '_blank', 'noopener');
   state.cart = []; state.coupon = null; persist(); updateCounts(); toggle('#drawer', false);
   toast('¡Pedido enviado! Te contactamos para el pago 🎉');

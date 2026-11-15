@@ -38,11 +38,11 @@ HTML5, CSS3, JavaScript, PHP 8 y Laravel [versión], base de datos MySQL.
 ## 6. Inversión
 | Concepto | Monto |
 |---|---|
-| Desarrollo del proyecto | $[ ] |
-| **Total** | **$[ ]** |
+| Desarrollo del proyecto | S/ [ ] |
+| **Total** | **S/ [ ]** |
 
 **Forma de pago:** 50% para iniciar, 50% contra entrega.
-**Opcional — Mantenimiento mensual:** $[ ] / mes (actualizaciones, respaldos, cambios menores, monitoreo).
+**Opcional — Mantenimiento mensual:** S/ [ ] / mes (actualizaciones, respaldos, cambios menores, monitoreo).
 
 ## 7. Garantías
 - El código, dominio y accesos quedan a nombre del cliente.

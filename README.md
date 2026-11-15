@@ -31,7 +31,7 @@ Landing page profesional + plan completo para **vender servicios de desarrollo w
 
 1. **Personaliza tus datos**
    - `js/main.js` → `CONFIG.whatsapp` con tu número en formato internacional (ej. `5215512345678`).
-   - `index.html` → reemplaza enlaces de redes (`TU_PAGINA`, `TU_USUARIO`) y precios `$XXX`.
+   - `index.html` → reemplaza enlaces de redes (`TU_PAGINA`, `TU_USUARIO`) y precios `S/ XXX`.
    - Sustituye los proyectos de ejemplo del portafolio y los testimonios por los reales.
 2. **Publica la web**: en GitHub → *Settings → Pages → Source: GitHub Actions*. Cada `push` a `main` actualiza el sitio en `https://jlmg22204.github.io/portafolio-servicios-web/`.
 3. **Configura tus redes** siguiendo la sección 3 de [`docs/01-plan-marketing-redes.md`](docs/01-plan-marketing-redes.md).
@@ -51,7 +51,7 @@ Landing page profesional + plan completo para **vender servicios de desarrollo w
 
 | Demo | Qué muestra | Enlace |
 |---|---|---|
-| 🔥 Fogón 22 (restaurante) | Menú con buscador y categorías, carrito, envío gratis automático, domicilio/recoger, pedido a WhatsApp | `/demos/restaurante/` |
+| 🔥 Fogón 22 (restaurante) | Carta peruana con buscador y categorías, carrito, envío gratis automático, delivery/recojo, pedido a WhatsApp | `/demos/restaurante/` |
 | 🦷 Sonríe (clínica dental) | Reserva en 3 pasos, especialistas, días y horarios disponibles/ocupados, confirmación | `/demos/clinica/` |
 | 🌙 LÚA (boutique) | Catálogo con filtros y orden, vista rápida, colores y tallas con stock, favoritos, cupones (`LUA10`), checkout | `/demos/tienda/` |
 

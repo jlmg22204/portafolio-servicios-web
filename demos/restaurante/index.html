@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fogón 22 · Cocina mexicana | Menú digital y pedidos</title>
-  <meta name="description" content="Demo: menú digital con carrito y pedido directo a WhatsApp para restaurante.">
+  <title>Fogón 22 · Cocina peruana | Carta digital y delivery</title>
+  <meta name="description" content="Demo: carta digital con carrito y pedido de delivery directo a WhatsApp para restaurante.">
   <meta property="og:title" content="Fogón 22 · Pide en línea">
-  <meta property="og:description" content="Menú digital con pedido a WhatsApp. Proyecto demo.">
+  <meta property="og:description" content="Carta digital con delivery por WhatsApp. Proyecto demo.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
     <div class="wrap top__in">
       <a href="#" class="brand">🔥 Fogón 22</a>
       <nav class="top__nav">
-        <a href="#menu">Menú</a>
+        <a href="#menu">Carta</a>
         <a href="#nosotros">Nosotros</a>
         <a href="#ubicacion">Ubicación</a>
       </nav>
@@ -30,30 +30,30 @@
   <section class="hero">
     <div class="wrap hero__in">
       <p class="status" id="status"></p>
-      <h1>Sabor de fogón,<br>directo a tu mesa.</h1>
-      <p>Tacos, antojitos y platillos de la casa hechos al momento. Arma tu pedido aquí y envíalo por WhatsApp en un clic.</p>
+      <h1>Sabor criollo,<br>directo a tu mesa.</h1>
+      <p>Ceviches, criollo y platos de la casa preparados al momento. Arma tu pedido aquí y envíalo por WhatsApp en un clic.</p>
       <div class="hero__cta">
-        <a href="#menu" class="btn">Ver menú y pedir</a>
-        <span class="chip">🛵 Envío gratis desde $300</span>
+        <a href="#menu" class="btn">Ver carta y pedir</a>
+        <span class="chip">🛵 Delivery gratis desde S/ 80</span>
       </div>
     </div>
   </section>
 
   <main id="menu" class="wrap menu">
     <div class="menu__head">
-      <h2>Nuestro menú</h2>
-      <input type="search" id="search" placeholder="Buscar platillo…" aria-label="Buscar platillo">
+      <h2>Nuestra carta</h2>
+      <input type="search" id="search" placeholder="Buscar plato…" aria-label="Buscar plato">
     </div>
     <div class="tabs" id="tabs" role="tablist"></div>
     <div class="grid" id="grid"></div>
-    <p class="empty" id="empty" hidden>No encontramos ese platillo 😕</p>
+    <p class="empty" id="empty" hidden>No encontramos ese plato 😕</p>
   </main>
 
   <section id="nosotros" class="band">
     <div class="wrap band__in">
       <div>
-        <h2>Desde 2012 cocinando con leña</h2>
-        <p>Recetas de familia, tortillas hechas a mano y salsas molcajeteadas todos los días. Ingredientes frescos de productores locales.</p>
+        <h2>Desde 2012, cocina peruana de verdad</h2>
+        <p>Recetas de familia, pescado fresco del día y ajíes molidos en batán. Ingredientes de productores locales.</p>
       </div>
       <ul class="facts">
         <li><strong>4.8 ★</strong><span>en Google</span></li>
@@ -66,8 +66,8 @@
   <section id="ubicacion" class="wrap info">
     <div>
       <h2>Visítanos</h2>
-      <p>📍 Av. Principal 22, Col. Centro</p>
-      <p>🕒 Lunes a domingo · 13:00 a 23:00</p>
+      <p>📍 Av. Principal 22, Cercado</p>
+      <p>🕒 Lunes a domingo · 12:00 a 22:00</p>
       <p>📞 Pedidos por WhatsApp</p>
     </div>
     <div class="map" aria-label="Mapa ilustrativo">
@@ -85,19 +85,19 @@
         <button id="close-cart" aria-label="Cerrar">✕</button>
       </div>
       <ul class="lines" id="lines"></ul>
-      <p class="empty" id="cart-empty">Aún no agregas platillos.</p>
+      <p class="empty" id="cart-empty">Aún no agregas platos.</p>
       <form id="checkout" class="checkout">
         <div class="seg">
-          <label><input type="radio" name="tipo" value="Entrega a domicilio" checked> 🛵 Domicilio</label>
-          <label><input type="radio" name="tipo" value="Recoger en sucursal"> 🏃 Recoger</label>
+          <label><input type="radio" name="tipo" value="Delivery" checked> 🛵 Delivery</label>
+          <label><input type="radio" name="tipo" value="Recojo en local"> 🏃 Recojo</label>
         </div>
         <input name="nombre" placeholder="Tu nombre" required autocomplete="name">
         <input name="direccion" id="direccion" placeholder="Dirección de entrega" autocomplete="street-address">
-        <textarea name="notas" rows="2" placeholder="Notas (sin cebolla, extra salsa…)"></textarea>
+        <textarea name="notas" rows="2" placeholder="Notas (sin cebolla, ají aparte…)"></textarea>
         <div class="totals">
-          <p><span>Subtotal</span><span id="subtotal">$0</span></p>
-          <p><span>Envío</span><span id="envio">$0</span></p>
-          <p class="total"><span>Total</span><span id="total">$0</span></p>
+          <p><span>Subtotal</span><span id="subtotal">S/ 0</span></p>
+          <p><span>Envío</span><span id="envio">S/ 0</span></p>
+          <p class="total"><span>Total</span><span id="total">S/ 0</span></p>
         </div>
         <button class="btn btn--wa" type="submit">Enviar pedido por WhatsApp</button>
       </form>

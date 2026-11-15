@@ -94,7 +94,7 @@ Escribe "DESPEGUE" y te envío los detalles.
 > 3. ¿Ya tienes página o redes? Si es así, compárteme el enlace.
 
 **/precios**
-> Mis proyectos inician desde $XXX para una landing page. El precio final depende de lo que necesites, por eso prefiero hacerte una propuesta exacta, por escrito y sin compromiso. ¿Te parece si lo vemos en una llamada de 20 minutos? ¿Qué día te acomoda?
+> Mis proyectos inician desde S/ XXX para una landing page. El precio final depende de lo que necesites, por eso prefiero hacerte una propuesta exacta, por escrito y sin compromiso. ¿Te parece si lo vemos en una llamada de 20 minutos? ¿Qué día te acomoda?
 
 **/proceso**
 > Así trabajo:
@@ -115,7 +115,7 @@ Escribe "DESPEGUE" y te envío los detalles.
 Pregunta siempre:
 1. ¿Qué problema quieres resolver?
 2. ¿Para cuándo lo necesitas?
-3. ¿Tienes un presupuesto aproximado? *(ofrece rangos: "mis proyectos van de $X a $Y, ¿en qué rango te sientes cómodo?")*
+3. ¿Tienes un presupuesto aproximado? *(ofrece rangos: "mis proyectos van de S/ X a S/ Y, ¿en qué rango te sientes cómodo?")*
 4. ¿Quién más participa en la decisión?
 
 Si no hay problema claro, ni fecha, ni presupuesto → no inviertas horas en una propuesta; envía el plan básico y sigue nutriendo con contenido.

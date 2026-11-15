@@ -1,24 +1,24 @@
 const MENU = [
-  { id: 1, cat: 'Tacos', name: 'Tacos al pastor (3)', desc: 'Cerdo marinado al trompo, piña, cebolla y cilantro.', price: 75, emoji: '🌮', c: ['#ffd8a8', '#ff922b'], tag: 'Más pedido' },
-  { id: 2, cat: 'Tacos', name: 'Tacos de suadero (3)', desc: 'Suadero dorado en su jugo, salsa verde cruda.', price: 80, emoji: '🌮', c: ['#ffe8cc', '#fd7e14'] },
-  { id: 3, cat: 'Tacos', name: 'Tacos de birria (3)', desc: 'Con consomé para dipear, queso Oaxaca gratinado.', price: 110, emoji: '🌮', c: ['#ffc9c9', '#e03131'], tag: 'Picante' },
-  { id: 4, cat: 'Tacos', name: 'Tacos de coliflor (3)', desc: 'Coliflor rostizada al pastor, opción vegetariana.', price: 70, emoji: '🥦', c: ['#d3f9d8', '#40c057'], tag: 'Veggie' },
-  { id: 5, cat: 'Antojitos', name: 'Quesadilla de flor de calabaza', desc: 'Tortilla de maíz azul hecha a mano, queso y flor.', price: 55, emoji: '🫓', c: ['#fff3bf', '#fab005'] },
-  { id: 6, cat: 'Antojitos', name: 'Sopes de tinga (2)', desc: 'Frijol, tinga de pollo, crema, queso fresco.', price: 65, emoji: '🫔', c: ['#ffe8cc', '#e8590c'] },
-  { id: 7, cat: 'Antojitos', name: 'Guacamole con totopos', desc: 'Aguacate al momento, chile serrano y limón.', price: 90, emoji: '🥑', c: ['#d8f5a2', '#74b816'] },
-  { id: 8, cat: 'Platos fuertes', name: 'Arrachera al fogón', desc: '300 g, cebollitas, nopal asado, frijoles y tortillas.', price: 245, emoji: '🥩', c: ['#ffc9c9', '#c92a2a'], tag: 'Especial' },
-  { id: 9, cat: 'Platos fuertes', name: 'Enchiladas suizas', desc: 'Pollo, salsa verde cremosa, gratinadas.', price: 145, emoji: '🫕', c: ['#e9fac8', '#82c91e'] },
-  { id: 10, cat: 'Platos fuertes', name: 'Pozole rojo', desc: 'Cerdo, maíz cacahuazintle, tostadas y guarniciones.', price: 135, emoji: '🍲', c: ['#ffe3e3', '#f03e3e'] },
-  { id: 11, cat: 'Bebidas', name: 'Agua de horchata 1 L', desc: 'Receta de la casa con canela.', price: 45, emoji: '🥛', c: ['#f8f9fa', '#ced4da'] },
-  { id: 12, cat: 'Bebidas', name: 'Agua de jamaica 1 L', desc: 'Natural, poco dulce.', price: 45, emoji: '🍹', c: ['#ffdeeb', '#d6336c'] },
-  { id: 13, cat: 'Bebidas', name: 'Refresco de vidrio', desc: 'Varios sabores, 355 ml.', price: 30, emoji: '🥤', c: ['#d0ebff', '#1c7ed6'] },
-  { id: 14, cat: 'Postres', name: 'Churros con chocolate', desc: '5 churros recién hechos, chocolate caliente.', price: 70, emoji: '🍫', c: ['#e6ccb2', '#7f5539'] },
-  { id: 15, cat: 'Postres', name: 'Flan napolitano', desc: 'Cremoso, con caramelo de piloncillo.', price: 55, emoji: '🍮', c: ['#fff3bf', '#f08c00'] },
+  { id: 1, cat: 'Ceviches', name: 'Ceviche clásico', desc: 'Pescado del día, leche de tigre, camote, choclo y cancha.', price: 35, emoji: '🐟', c: ['#d0ebff', '#1c7ed6'], tag: 'Más pedido' },
+  { id: 2, cat: 'Ceviches', name: 'Ceviche mixto', desc: 'Pescado, pulpo, langostinos y conchas en leche de tigre.', price: 42, emoji: '🦐', c: ['#ffe3e3', '#fa5252'] },
+  { id: 3, cat: 'Ceviches', name: 'Leche de tigre', desc: 'Concentrada, con trocitos de pescado y chicharrón de calamar.', price: 22, emoji: '🥛', c: ['#fff9db', '#fab005'], tag: 'Picante' },
+  { id: 4, cat: 'Ceviches', name: 'Tiradito al ají amarillo', desc: 'Láminas finas de pescado en crema de ají amarillo.', price: 36, emoji: '🍋', c: ['#fff3bf', '#f59f00'] },
+  { id: 5, cat: 'Entradas', name: 'Causa limeña', desc: 'Papa amarilla al ají, rellena de pollo o atún.', price: 18, emoji: '🥔', c: ['#fff3bf', '#fcc419'] },
+  { id: 6, cat: 'Entradas', name: 'Anticuchos (2 palitos)', desc: 'Corazón de res a la parrilla, papa dorada y choclo.', price: 22, emoji: '🍢', c: ['#ffe8cc', '#e8590c'] },
+  { id: 7, cat: 'Entradas', name: 'Papa a la huancaína', desc: 'Crema de queso y ají amarillo, huevo y aceituna.', price: 16, emoji: '🧀', c: ['#fff9db', '#f08c00'], tag: 'Veggie' },
+  { id: 8, cat: 'Fondos', name: 'Lomo saltado', desc: 'Lomo fino al wok, cebolla, tomate, papas fritas y arroz.', price: 38, emoji: '🥩', c: ['#ffc9c9', '#c92a2a'], tag: 'Especial' },
+  { id: 9, cat: 'Fondos', name: 'Ají de gallina', desc: 'Pechuga deshilachada en crema de ají amarillo, arroz y papa.', price: 28, emoji: '🍛', c: ['#fff3bf', '#e67700'] },
+  { id: 10, cat: 'Fondos', name: 'Arroz con mariscos', desc: 'Arroz norteño con mariscos frescos y salsa criolla.', price: 40, emoji: '🥘', c: ['#ffe8cc', '#fd7e14'] },
+  { id: 11, cat: 'Bebidas', name: 'Chicha morada 1 L', desc: 'Maíz morado, piña, canela y clavo. Hecha en casa.', price: 12, emoji: '🍇', c: ['#e5dbff', '#7048e8'] },
+  { id: 12, cat: 'Bebidas', name: 'Limonada frozen 1 L', desc: 'Limón recién exprimido, opción con hierbabuena.', price: 12, emoji: '🍋', c: ['#ebfbee', '#40c057'] },
+  { id: 13, cat: 'Bebidas', name: 'Gaseosa personal', desc: 'Inca Kola o Coca-Cola, 500 ml.', price: 5, emoji: '🥤', c: ['#fff3bf', '#fab005'] },
+  { id: 14, cat: 'Postres', name: 'Picarones (4)', desc: 'Masa de zapallo y camote con miel de chancaca.', price: 14, emoji: '🍩', c: ['#e6ccb2', '#9c6644'] },
+  { id: 15, cat: 'Postres', name: 'Suspiro a la limeña', desc: 'Manjar blanco con merengue al oporto.', price: 12, emoji: '🍮', c: ['#fff3bf', '#f08c00'] },
 ];
-const ENVIO = 35, ENVIO_GRATIS = 300, HORA_ABRE = 13, HORA_CIERRA = 23;
+const ENVIO = 7, ENVIO_GRATIS = 80, HORA_ABRE = 12, HORA_CIERRA = 22;
 
 const $ = (s) => document.querySelector(s);
-const money = (n) => '$' + n.toLocaleString('es-MX');
+const money = (n) => 'S/ ' + n.toLocaleString('es-PE');
 let cart = load();
 let currentCat = 'Todo';
 
@@ -53,7 +53,7 @@ function renderMenu() {
 
 function totals() {
   const sub = Object.entries(cart).reduce((s, [id, q]) => s + MENU.find((d) => d.id == id).price * q, 0);
-  const pickup = document.querySelector('input[name="tipo"]:checked').value !== 'Entrega a domicilio';
+  const pickup = document.querySelector('input[name="tipo"]:checked').value !== 'Delivery';
   const envio = sub === 0 || pickup || sub >= ENVIO_GRATIS ? 0 : ENVIO;
   return { sub, envio, total: sub + envio };
 }
@@ -74,7 +74,7 @@ function renderCart() {
   $('#subtotal').textContent = money(t.sub);
   $('#envio').textContent = t.envio ? money(t.envio) : 'Gratis';
   $('#total').textContent = money(t.total);
-  const pickup = document.querySelector('input[name="tipo"]:checked').value !== 'Entrega a domicilio';
+  const pickup = document.querySelector('input[name="tipo"]:checked').value !== 'Delivery';
   $('#direccion').hidden = pickup;
   $('#direccion').required = !pickup;
 }
@@ -95,7 +95,7 @@ document.addEventListener('click', (e) => {
   const inc = e.target.closest('[data-inc]'), dec = e.target.closest('[data-dec]'), tab = e.target.closest('.tab');
   if (inc) {
     const id = inc.dataset.inc; cart[id] = (cart[id] || 0) + 1;
-    if (cart[id] === 1) toast('✓ ' + MENU.find((d) => d.id == id).name + ' agregado');
+    if (cart[id] === 1) toast('✓ Agregado: ' + MENU.find((d) => d.id == id).name);
     $('#open-cart').classList.remove('bump'); void $('#open-cart').offsetWidth; $('#open-cart').classList.add('bump');
     render();
   }
@@ -120,7 +120,7 @@ $('#checkout').addEventListener('submit', (e) => {
   const msg = [
     '🔥 *Nuevo pedido — Fogón 22*', '', ...lines, '',
     `Subtotal: ${money(t.sub)}`, `Envío: ${t.envio ? money(t.envio) : 'Gratis'}`, `*Total: ${money(t.total)}*`, '',
-    `👤 ${f.nombre}`, `📦 ${f.tipo}`, f.tipo === 'Entrega a domicilio' ? `📍 ${f.direccion}` : '',
+    `👤 ${f.nombre}`, `📦 ${f.tipo}`, f.tipo === 'Delivery' ? `📍 ${f.direccion}` : '',
     f.notas ? `📝 ${f.notas}` : '',
   ].filter((l, i, a) => l !== '' || a[i - 1] !== '').join('\n');
   window.open(demoWaLink(msg), '_blank', 'noopener');
@@ -131,7 +131,7 @@ $('#checkout').addEventListener('submit', (e) => {
 // Abierto / cerrado según la hora local
 const h = new Date().getHours();
 const open = h >= HORA_ABRE && h < HORA_CIERRA;
-$('#status').textContent = open ? `Abierto ahora · cierra a las ${HORA_CIERRA}:00` : `Cerrado · abrimos a las ${HORA_ABRE}:00 (puedes programar tu pedido)`;
+$('#status').textContent = open ? `Abierto ahora · cierra a las ${HORA_CIERRA}:00` : `Cerrado · abrimos a las ${HORA_ABRE}:00 (puedes dejar tu pedido programado)`;
 $('#status').className = 'status ' + (open ? 'open' : 'closed');
 
 renderTabs(); render();
