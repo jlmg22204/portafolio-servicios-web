@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desarrollo Web Full Stack | Páginas web, tiendas y sistemas a medida</title>
+  <meta name="description" content="Desarrollador web full stack independiente. Creo páginas web, tiendas en línea y sistemas a medida con HTML, CSS, JavaScript, PHP y Laravel. Cotiza gratis por WhatsApp.">
+
+  <!-- Open Graph: así se ve el enlace al compartirlo en Facebook, Instagram y WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Desarrollo Web Full Stack | Tu negocio en internet, bien hecho">
+  <meta property="og:description" content="Páginas web, tiendas en línea y sistemas a medida con Laravel. Cotización gratis.">
+  <meta property="og:image" content="img/og-cover.svg">
+  <meta property="og:locale" content="es_LA">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="logo">&lt;<span>TuNombre</span>/&gt;</a>
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <nav class="nav__links">
+        <a href="#servicios">Servicios</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#planes">Planes</a>
+        <a href="#faq">Preguntas</a>
+        <a href="#contacto" class="btn btn--sm">Cotizar gratis</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <p class="eyebrow">Desarrollador Web Full Stack · Independiente</p>
+        <h1>Tu negocio merece una web que <span class="hl">venda</span>, no solo que exista.</h1>
+        <p class="lead">Diseño y programo páginas web, tiendas en línea y sistemas a medida con
+          <strong>HTML, CSS, JavaScript, PHP y Laravel</strong>. Trato directo conmigo, sin intermediarios,
+          con entregas por etapas y soporte después del lanzamiento.</p>
+        <div class="hero__cta">
+          <a class="btn" href="#contacto" data-track="hero_cotizar">Quiero mi cotización gratis</a>
+          <a class="btn btn--ghost" href="#portafolio">Ver trabajos</a>
+        </div>
+        <ul class="hero__stats">
+          <li><strong data-count="25">0</strong>+ <span>proyectos entregados</span></li>
+          <li><strong data-count="5">0</strong>+ <span>años programando</span></li>
+          <li><strong data-count="100">0</strong>% <span>código propio</span></li>
+        </ul>
+      </div>
+      <div class="hero__code" aria-hidden="true">
+        <div class="code__bar"><i></i><i></i><i></i><span>routes/web.php</span></div>
+<pre><code><span class="k">Route</span>::<span class="f">get</span>(<span class="s">'/'</span>, <span class="k">function</span> () {
+    <span class="k">return</span> <span class="f">view</span>(<span class="s">'tu-negocio'</span>, [
+        <span class="s">'clientes'</span> =&gt; <span class="s">'más'</span>,
+        <span class="s">'ventas'</span>   =&gt; <span class="s">'24/7'</span>,
+        <span class="s">'velocidad'</span>=&gt; <span class="s">'⚡'</span>,
+    ]);
+});</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICIOS ===== -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <p class="eyebrow">Qué hago</p>
+      <h2>Servicios pensados para negocios reales</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card__icon">🌐</div>
+          <h3>Landing pages y sitios corporativos</h3>
+          <p>Sitios rápidos, adaptados a celular y optimizados para Google, con botón de WhatsApp y formulario de contacto.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">🛒</div>
+          <h3>Tiendas en línea</h3>
+          <p>Catálogo, carrito, pagos en línea, control de inventario y panel para que tú administres tus productos.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">⚙️</div>
+          <h3>Sistemas a medida con Laravel</h3>
+          <p>Inventarios, citas, facturación, CRM, punto de venta y paneles administrativos que se ajustan a tu operación.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">🔌</div>
+          <h3>APIs e integraciones</h3>
+          <p>Conecto tu sistema con pasarelas de pago, WhatsApp, correo, facturación electrónica y otros servicios.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">🛠️</div>
+          <h3>Mantenimiento y mejoras</h3>
+          <p>Corrijo errores, actualizo versiones de PHP/Laravel, mejoro velocidad y seguridad de sitios existentes.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">🚀</div>
+          <h3>Hosting, dominio y lanzamiento</h3>
+          <p>Configuro dominio, certificado SSL, correos corporativos y despliegue para que no te preocupes por nada técnico.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTAFOLIO ===== -->
+  <section class="section section--alt" id="portafolio">
+    <div class="container">
+      <p class="eyebrow">Portafolio</p>
+      <h2>Trabajos recientes</h2>
+      <p class="sub">Reemplaza estos ejemplos por tus proyectos reales: captura, problema del cliente y resultado.</p>
+      <div class="filters" role="tablist">
+        <button class="filter is-active" data-filter="all">Todos</button>
+        <button class="filter" data-filter="web">Sitios web</button>
+        <button class="filter" data-filter="shop">Tiendas</button>
+        <button class="filter" data-filter="system">Sistemas</button>
+      </div>
+      <div class="projects">
+        <article class="project" data-cat="web">
+          <div class="project__img" style="--c1:#6366f1;--c2:#22d3ee">Restaurante</div>
+          <div class="project__body">
+            <h3>Sitio web para restaurante</h3>
+            <p><strong>Reto:</strong> pedidos solo por teléfono. <strong>Solución:</strong> menú digital con pedido a WhatsApp.</p>
+            <p class="result">+40% pedidos en el primer mes</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          </div>
+        </article>
+        <article class="project" data-cat="shop">
+          <div class="project__img" style="--c1:#f43f5e;--c2:#f59e0b">Boutique</div>
+          <div class="project__body">
+            <h3>Tienda en línea de ropa</h3>
+            <p><strong>Reto:</strong> vendía solo por Instagram. <strong>Solución:</strong> tienda con pagos y control de tallas.</p>
+            <p class="result">Ventas 24/7 sin responder DMs uno por uno</p>
+            <ul class="tags"><li>Laravel</li><li>MySQL</li><li>Pasarela de pago</li></ul>
+          </div>
+        </article>
+        <article class="project" data-cat="system">
+          <div class="project__img" style="--c1:#10b981;--c2:#0ea5e9">Clínica</div>
+          <div class="project__body">
+            <h3>Sistema de citas para clínica</h3>
+            <p><strong>Reto:</strong> agenda en papel y citas perdidas. <strong>Solución:</strong> agenda en línea con recordatorios.</p>
+            <p class="result">-60% inasistencias</p>
+            <ul class="tags"><li>Laravel</li><li>Livewire</li><li>API WhatsApp</li></ul>
+          </div>
+        </article>
+        <article class="project" data-cat="system">
+          <div class="project__img" style="--c1:#8b5cf6;--c2:#ec4899">Ferretería</div>
+          <div class="project__body">
+            <h3>Inventario y punto de venta</h3>
+            <p><strong>Reto:</strong> inventario en Excel. <strong>Solución:</strong> POS con reportes y alertas de stock.</p>
+            <p class="result">Cierre de caja en 5 minutos</p>
+            <ul class="tags"><li>Laravel</li><li>MySQL</li><li>Chart.js</li></ul>
+          </div>
+        </article>
+        <article class="project" data-cat="web">
+          <div class="project__img" style="--c1:#0ea5e9;--c2:#6366f1">Abogados</div>
+          <div class="project__body">
+            <h3>Sitio corporativo para despacho</h3>
+            <p><strong>Reto:</strong> sin presencia en Google. <strong>Solución:</strong> sitio con SEO local y blog.</p>
+            <p class="result">Primera página de Google en su ciudad</p>
+            <ul class="tags"><li>PHP</li><li>SEO</li><li>Google Business</li></ul>
+          </div>
+        </article>
+        <article class="project" data-cat="shop">
+          <div class="project__img" style="--c1:#f59e0b;--c2:#ef4444">Repostería</div>
+          <div class="project__body">
+            <h3>Catálogo con pedidos</h3>
+            <p><strong>Reto:</strong> pedidos desordenados. <strong>Solución:</strong> catálogo con fecha de entrega y anticipo.</p>
+            <p class="result">Pedidos organizados por fecha automáticamente</p>
+            <ul class="tags"><li>Laravel</li><li>Alpine.js</li><li>Tailwind</li></ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESO ===== -->
+  <section class="section" id="proceso">
+    <div class="container">
+      <p class="eyebrow">Cómo trabajo</p>
+      <h2>Un proceso claro, sin sorpresas</h2>
+      <ol class="steps">
+        <li><span>1</span><h3>Llamada de diagnóstico</h3><p>20 minutos gratis para entender tu negocio y lo que necesitas.</p></li>
+        <li><span>2</span><h3>Propuesta por escrito</h3><p>Alcance, tiempos y precio cerrado. Sin letras pequeñas.</p></li>
+        <li><span>3</span><h3>Diseño y desarrollo</h3><p>Avances cada semana con un enlace de prueba que puedes revisar.</p></li>
+        <li><span>4</span><h3>Lanzamiento</h3><p>Publico tu proyecto, te capacito y te entrego accesos y código.</p></li>
+        <li><span>5</span><h3>Soporte</h3><p>30 días de garantía y planes de mantenimiento mensual opcionales.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== PLANES ===== -->
+  <section class="section section--alt" id="planes">
+    <div class="container">
+      <p class="eyebrow">Planes</p>
+      <h2>Elige el punto de partida</h2>
+      <p class="sub">Precios de referencia. Cada proyecto se cotiza a medida después de la llamada.</p>
+      <div class="plans">
+        <article class="plan">
+          <h3>Despegue</h3>
+          <p class="plan__desc">Landing page para empezar a recibir clientes.</p>
+          <p class="price">Desde <strong>$XXX</strong></p>
+          <ul>
+            <li>1 página con hasta 6 secciones</li>
+            <li>Diseño adaptado a celular</li>
+            <li>Botón de WhatsApp y formulario</li>
+            <li>SEO básico y Google Analytics</li>
+            <li>Entrega en 7 días</li>
+          </ul>
+          <a class="btn btn--ghost" href="#contacto" data-plan="Despegue">Me interesa</a>
+        </article>
+        <article class="plan plan--featured">
+          <span class="badge">Más elegido</span>
+          <h3>Negocio</h3>
+          <p class="plan__desc">Sitio completo o tienda para vender en línea.</p>
+          <p class="price">Desde <strong>$X,XXX</strong></p>
+          <ul>
+            <li>Hasta 8 páginas o tienda con 50 productos</li>
+            <li>Panel administrativo (Laravel)</li>
+            <li>Pagos en línea o pedidos a WhatsApp</li>
+            <li>Blog / SEO local</li>
+            <li>Capacitación y 30 días de soporte</li>
+          </ul>
+          <a class="btn" href="#contacto" data-plan="Negocio">Me interesa</a>
+        </article>
+        <article class="plan">
+          <h3>A medida</h3>
+          <p class="plan__desc">Sistemas web para automatizar tu operación.</p>
+          <p class="price"><strong>Cotización</strong></p>
+          <ul>
+            <li>Análisis de procesos</li>
+            <li>Roles, permisos y reportes</li>
+            <li>Integraciones y API</li>
+            <li>Entregas por etapas (pago por avance)</li>
+            <li>Mantenimiento mensual opcional</li>
+          </ul>
+          <a class="btn btn--ghost" href="#contacto" data-plan="A medida">Agendar llamada</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIOS ===== -->
+  <section class="section" id="testimonios">
+    <div class="container">
+      <p class="eyebrow">Testimonios</p>
+      <h2>Lo que dicen mis clientes</h2>
+      <p class="sub">Sustituye por testimonios reales (con permiso del cliente). Un testimonio con foto y nombre vende más que cualquier anuncio.</p>
+      <div class="quotes">
+        <blockquote><p>“Testimonio real de tu cliente: qué problema tenía y qué cambió después de trabajar contigo.”</p><cite>Nombre · Negocio · Ciudad</cite></blockquote>
+        <blockquote><p>“Destaca la comunicación, el cumplimiento de tiempos y el soporte después de la entrega.”</p><cite>Nombre · Negocio · Ciudad</cite></blockquote>
+        <blockquote><p>“Un resultado medible: más ventas, menos tiempo, más clientes desde Google.”</p><cite>Nombre · Negocio · Ciudad</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section section--alt" id="faq">
+    <div class="container container--narrow">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2>Resolvemos tus dudas</h2>
+      <details><summary>¿Cuánto tiempo tarda mi página?</summary><p>Una landing page entre 5 y 7 días hábiles. Un sitio o tienda entre 2 y 4 semanas. Los sistemas a medida se planifican por etapas.</p></details>
+      <details><summary>¿Cómo son los pagos?</summary><p>50% de anticipo para iniciar y 50% al entregar. En proyectos grandes, pagos por etapa terminada.</p></details>
+      <details><summary>¿La página será mía?</summary><p>Sí. Te entrego el código, los accesos al hosting, dominio y panel administrativo.</p></details>
+      <details><summary>¿Puedo actualizar el contenido yo mismo?</summary><p>Sí. Incluyo un panel sencillo y una capacitación para que cambies textos, fotos y productos.</p></details>
+      <details><summary>¿Trabajas con clientes de otras ciudades o países?</summary><p>Sí, trabajo 100% en línea con videollamadas y avances semanales.</p></details>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section class="section" id="contacto">
+    <div class="container contact">
+      <div>
+        <p class="eyebrow">Contacto</p>
+        <h2>Cuéntame tu proyecto</h2>
+        <p>Respondo en menos de 24 horas. Si prefieres, escríbeme directo por WhatsApp.</p>
+        <a class="btn btn--wa" id="wa-direct" href="#" target="_blank" rel="noopener">💬 Escribir por WhatsApp</a>
+        <ul class="socials">
+          <li><a href="https://facebook.com/TU_PAGINA" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://instagram.com/TU_USUARIO" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://linkedin.com/in/TU_USUARIO" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/jlmg22204" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+      <form class="form" id="lead-form" novalidate>
+        <label>Nombre<input name="nombre" required autocomplete="name"></label>
+        <label>Negocio<input name="negocio" placeholder="Ej. Pastelería Dulce Hogar"></label>
+        <label>¿Qué necesitas?
+          <select name="servicio" required>
+            <option value="">Selecciona una opción</option>
+            <option>Landing page</option>
+            <option>Sitio web corporativo</option>
+            <option>Tienda en línea</option>
+            <option>Sistema a medida</option>
+            <option>Mantenimiento / mejoras</option>
+          </select>
+        </label>
+        <label>¿Cómo me encontraste?
+          <select name="origen">
+            <option>Facebook</option>
+            <option>Instagram</option>
+            <option>TikTok</option>
+            <option>LinkedIn</option>
+            <option>Google</option>
+            <option>Recomendación</option>
+          </select>
+        </label>
+        <label>Mensaje<textarea name="mensaje" rows="4" placeholder="Cuéntame brevemente tu idea"></textarea></label>
+        <button class="btn" type="submit">Enviar por WhatsApp</button>
+        <p class="form__msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> TuNombre · Desarrollo Web Full Stack · Hecho a mano con HTML, CSS y JavaScript.</p>
+    </div>
+  </footer>
+
+  <a class="wa-float" id="wa-float" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+# Portafolio y plan de ventas — Desarrollador Web Full Stack
+
+Landing page profesional + plan completo para **vender servicios de desarrollo web en redes sociales** (Facebook, Instagram, TikTok, LinkedIn y WhatsApp Business).
+
+**Stack de la landing:** HTML5 · CSS3 · JavaScript (sin dependencias) · lista para GitHub Pages.
+
+---
+
+## 📁 Estructura
+
+```
+├── index.html                      # Landing / portafolio (destino de todos los enlaces de redes)
+├── css/styles.css                  # Estilos responsivos, modo oscuro
+├── js/main.js                      # WhatsApp, formulario, filtros, UTM, animaciones
+├── img/                            # Favicon e imagen para compartir (Open Graph)
+├── docs/
+│   ├── 01-plan-marketing-redes.md  # Estrategia completa: posicionamiento, contenido, embudo, ads, plan 90 días
+│   ├── 02-calendario-30-dias.csv   # Calendario de publicaciones (ábrelo en Excel / Google Sheets)
+│   ├── 03-guiones-venta.md         # Bios, copys, respuestas de WhatsApp, objeciones, seguimiento
+│   ├── 04-tablero-kpis.csv         # Registro semanal de métricas
+│   └── 05-plantilla-propuesta.md   # Plantilla de cotización para clientes
+└── .github/workflows/pages.yml     # Publicación automática en GitHub Pages
+```
+
+## ✅ Primeros pasos
+
+1. **Personaliza tus datos**
+   - `js/main.js` → `CONFIG.whatsapp` con tu número en formato internacional (ej. `5215512345678`).
+   - `index.html` → reemplaza `TuNombre`, enlaces de redes (`TU_PAGINA`, `TU_USUARIO`) y precios `$XXX`.
+   - Sustituye los proyectos de ejemplo del portafolio y los testimonios por los reales.
+2. **Publica la web**: en GitHub → *Settings → Pages → Source: GitHub Actions*. Cada `push` a `main` actualiza el sitio en `https://jlmg22204.github.io/portafolio-servicios-web/`.
+3. **Configura tus redes** siguiendo la sección 3 de [`docs/01-plan-marketing-redes.md`](docs/01-plan-marketing-redes.md).
+4. **Usa enlaces con UTM** en cada red (ej. `?utm_source=instagram&utm_campaign=bio`): el origen llega automáticamente en el mensaje de WhatsApp.
+5. **Sigue el calendario** de [`docs/02-calendario-30-dias.csv`](docs/02-calendario-30-dias.csv) y registra resultados cada semana en `docs/04-tablero-kpis.csv`.
+
+## 🧩 Funciones de la landing
+
+- Diseño responsivo y rápido (sin frameworks, ideal para PageSpeed 90+).
+- Botón flotante y formulario que arman el mensaje de WhatsApp con los datos del prospecto.
+- Detección de origen (`utm_source`, `utm_campaign`) para saber qué red trae clientes.
+- Portafolio con filtros por categoría y formato *Reto → Solución → Resultado*.
+- Planes, proceso de trabajo, testimonios y preguntas frecuentes (resuelven objeciones antes de la venta).
+- Etiquetas Open Graph para que el enlace se vea profesional al compartirlo en Facebook y WhatsApp.
+
+## 🗺️ Siguientes mejoras sugeridas
+
+- [ ] Reemplazar `img/og-cover.svg` por un PNG 1200×630 (Facebook no muestra SVG en vistas previas).
+- [ ] Agregar Meta Pixel y Google Analytics 4.
+- [ ] Crear 3 proyectos demo por nicho (restaurante, clínica, tienda) en repos separados y enlazarlos.
+- [ ] Versión Laravel con formulario que guarde leads en base de datos y panel para gestionarlos.
+- [ ] Dominio propio (ej. `tunombre.dev`).
