@@ -1,7 +1,7 @@
 /* Banner superior que identifica el sitio como proyecto demo y lleva al portafolio.
    Cambia DEMO_CONFIG con tus datos: se usa en los tres demos. */
 const DEMO_CONFIG = {
-  autor: 'TuNombre',
+  autor: 'JM Dev',
   // WhatsApp de destino para los pedidos/citas de los demos (formato internacional sin "+")
   whatsapp: '51913718392',
   portafolio: '../../index.html#portafolio',

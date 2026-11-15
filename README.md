@@ -31,7 +31,7 @@ Landing page profesional + plan completo para **vender servicios de desarrollo w
 
 1. **Personaliza tus datos**
    - `js/main.js` → `CONFIG.whatsapp` con tu número en formato internacional (ej. `5215512345678`).
-   - `index.html` → reemplaza `TuNombre`, enlaces de redes (`TU_PAGINA`, `TU_USUARIO`) y precios `$XXX`.
+   - `index.html` → reemplaza enlaces de redes (`TU_PAGINA`, `TU_USUARIO`) y precios `$XXX`.
    - Sustituye los proyectos de ejemplo del portafolio y los testimonios por los reales.
 2. **Publica la web**: en GitHub → *Settings → Pages → Source: GitHub Actions*. Cada `push` a `main` actualiza el sitio en `https://jlmg22204.github.io/portafolio-servicios-web/`.
 3. **Configura tus redes** siguiendo la sección 3 de [`docs/01-plan-marketing-redes.md`](docs/01-plan-marketing-redes.md).
