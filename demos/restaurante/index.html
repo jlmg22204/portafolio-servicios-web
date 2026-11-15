@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fogón 22 · Cocina mexicana | Menú digital y pedidos</title>
+  <meta name="description" content="Demo: menú digital con carrito y pedido directo a WhatsApp para restaurante.">
+  <meta property="og:title" content="Fogón 22 · Pide en línea">
+  <meta property="og:description" content="Menú digital con pedido a WhatsApp. Proyecto demo.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="top">
+    <div class="wrap top__in">
+      <a href="#" class="brand">🔥 Fogón 22</a>
+      <nav class="top__nav">
+        <a href="#menu">Menú</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#ubicacion">Ubicación</a>
+      </nav>
+      <button class="cart-btn" id="open-cart" aria-label="Ver pedido">🛒 <span id="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero__in">
+      <p class="status" id="status"></p>
+      <h1>Sabor de fogón,<br>directo a tu mesa.</h1>
+      <p>Tacos, antojitos y platillos de la casa hechos al momento. Arma tu pedido aquí y envíalo por WhatsApp en un clic.</p>
+      <div class="hero__cta">
+        <a href="#menu" class="btn">Ver menú y pedir</a>
+        <span class="chip">🛵 Envío gratis desde $300</span>
+      </div>
+    </div>
+  </section>
+
+  <main id="menu" class="wrap menu">
+    <div class="menu__head">
+      <h2>Nuestro menú</h2>
+      <input type="search" id="search" placeholder="Buscar platillo…" aria-label="Buscar platillo">
+    </div>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>No encontramos ese platillo 😕</p>
+  </main>
+
+  <section id="nosotros" class="band">
+    <div class="wrap band__in">
+      <div>
+        <h2>Desde 2012 cocinando con leña</h2>
+        <p>Recetas de familia, tortillas hechas a mano y salsas molcajeteadas todos los días. Ingredientes frescos de productores locales.</p>
+      </div>
+      <ul class="facts">
+        <li><strong>4.8 ★</strong><span>en Google</span></li>
+        <li><strong>25 min</strong><span>tiempo promedio</span></li>
+        <li><strong>+12k</strong><span>pedidos entregados</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="ubicacion" class="wrap info">
+    <div>
+      <h2>Visítanos</h2>
+      <p>📍 Av. Principal 22, Col. Centro</p>
+      <p>🕒 Lunes a domingo · 13:00 a 23:00</p>
+      <p>📞 Pedidos por WhatsApp</p>
+    </div>
+    <div class="map" aria-label="Mapa ilustrativo">
+      <span>📍</span>
+    </div>
+  </section>
+
+  <footer class="foot"><div class="wrap">© Fogón 22 · Sitio de demostración</div></footer>
+
+  <!-- Carrito -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__panel" role="dialog" aria-label="Tu pedido">
+      <div class="drawer__head">
+        <h3>Tu pedido</h3>
+        <button id="close-cart" aria-label="Cerrar">✕</button>
+      </div>
+      <ul class="lines" id="lines"></ul>
+      <p class="empty" id="cart-empty">Aún no agregas platillos.</p>
+      <form id="checkout" class="checkout">
+        <div class="seg">
+          <label><input type="radio" name="tipo" value="Entrega a domicilio" checked> 🛵 Domicilio</label>
+          <label><input type="radio" name="tipo" value="Recoger en sucursal"> 🏃 Recoger</label>
+        </div>
+        <input name="nombre" placeholder="Tu nombre" required autocomplete="name">
+        <input name="direccion" id="direccion" placeholder="Dirección de entrega" autocomplete="street-address">
+        <textarea name="notas" rows="2" placeholder="Notas (sin cebolla, extra salsa…)"></textarea>
+        <div class="totals">
+          <p><span>Subtotal</span><span id="subtotal">$0</span></p>
+          <p><span>Envío</span><span id="envio">$0</span></p>
+          <p class="total"><span>Total</span><span id="total">$0</span></p>
+        </div>
+        <button class="btn btn--wa" type="submit">Enviar pedido por WhatsApp</button>
+      </form>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="../demo-banner.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

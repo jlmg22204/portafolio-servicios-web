@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LÚA · Boutique | Tienda en línea</title>
+  <meta name="description" content="Demo: tienda en línea con catálogo, tallas, carrito, cupones y checkout por WhatsApp.">
+  <meta property="og:title" content="LÚA Boutique · Compra en línea">
+  <meta property="og:description" content="Tienda en línea con carrito y checkout. Proyecto demo.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <p class="promo">Envío gratis en compras desde $999 · Usa el cupón <b>LUA10</b> y obtén 10% de descuento</p>
+
+  <header class="top">
+    <div class="wrap top__in">
+      <a href="#" class="brand">LÚA<span>boutique</span></a>
+      <nav class="top__nav" id="cat-nav"></nav>
+      <div class="top__icons">
+        <button class="icon-btn" id="open-fav" aria-label="Favoritos">♡ <span id="fav-count">0</span></button>
+        <button class="icon-btn icon-btn--dark" id="open-cart" aria-label="Carrito">Bolsa <span id="cart-count">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero__in">
+      <div>
+        <p class="kicker">Nueva colección · Otoño</p>
+        <h1>Piezas que se sienten tan bien como se ven.</h1>
+        <p>Diseño local, telas naturales y producción en pequeños lotes. Compra en línea, paga seguro y recibe en 48 h.</p>
+        <a href="#catalogo" class="btn">Comprar ahora</a>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <div class="tile t1">👗</div><div class="tile t2">👜</div><div class="tile t3">🧥</div><div class="tile t4">👡</div>
+      </div>
+    </div>
+  </section>
+
+  <ul class="perks wrap">
+    <li>🚚 <span><b>Envío 48 h</b> a todo el país</span></li>
+    <li>🔄 <span><b>Cambios gratis</b> 30 días</span></li>
+    <li>🔒 <span><b>Pago seguro</b> tarjeta, transferencia u OXXO</span></li>
+    <li>💬 <span><b>Asesoría</b> de talla por WhatsApp</span></li>
+  </ul>
+
+  <main id="catalogo" class="wrap shop">
+    <div class="toolbar">
+      <h2 id="shop-title">Todo</h2>
+      <div class="toolbar__r">
+        <input type="search" id="search" placeholder="Buscar…" aria-label="Buscar producto">
+        <select id="sort" aria-label="Ordenar">
+          <option value="pop">Más vendidos</option>
+          <option value="asc">Precio: menor a mayor</option>
+          <option value="desc">Precio: mayor a menor</option>
+          <option value="new">Novedades</option>
+        </select>
+      </div>
+    </div>
+    <div class="products" id="products"></div>
+    <p class="empty" id="empty" hidden>No hay productos que coincidan.</p>
+  </main>
+
+  <section class="newsletter">
+    <div class="wrap">
+      <h2>Únete al club LÚA</h2>
+      <p>Lanzamientos antes que nadie y 10% en tu primera compra.</p>
+      <form id="news" class="news">
+        <input type="email" placeholder="tu@correo.com" required aria-label="Correo">
+        <button class="btn">Suscribirme</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="foot"><div class="wrap">© LÚA Boutique · Sitio de demostración</div></footer>
+
+  <!-- Modal producto -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__box" role="dialog" aria-label="Detalle de producto">
+      <button class="close" data-close aria-label="Cerrar">✕</button>
+      <div class="modal__img" id="m-img"></div>
+      <div class="modal__info">
+        <p class="kicker" id="m-cat"></p>
+        <h3 id="m-name"></h3>
+        <p class="m-price" id="m-price"></p>
+        <p class="m-desc" id="m-desc"></p>
+        <p class="lbl">Color: <b id="m-color-name"></b></p>
+        <div class="colors" id="m-colors"></div>
+        <p class="lbl">Talla</p>
+        <div class="sizes" id="m-sizes"></div>
+        <p class="stock" id="m-stock"></p>
+        <button class="btn btn--full" id="m-add">Agregar a la bolsa</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drawer carrito / favoritos -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__panel">
+      <div class="drawer__head"><h3 id="d-title">Tu bolsa</h3><button class="close" data-close aria-label="Cerrar">✕</button></div>
+      <div id="d-body"></div>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="../demo-banner.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

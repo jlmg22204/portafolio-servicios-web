@@ -13,6 +13,11 @@ Landing page profesional + plan completo para **vender servicios de desarrollo w
 ├── css/styles.css                  # Estilos responsivos, modo oscuro
 ├── js/main.js                      # WhatsApp, formulario, filtros, UTM, animaciones
 ├── img/                            # Favicon e imagen para compartir (Open Graph)
+├── demos/
+│   ├── demo-banner.js              # Banner "Proyecto demo" + WhatsApp de los demos (DEMO_CONFIG)
+│   ├── restaurante/                # Fogón 22: menú digital, carrito y pedido a WhatsApp
+│   ├── clinica/                    # Sonríe: agenda de citas en 3 pasos con horarios disponibles
+│   └── tienda/                     # LÚA Boutique: catálogo, tallas, cupones y checkout
 ├── docs/
 │   ├── 01-plan-marketing-redes.md  # Estrategia completa: posicionamiento, contenido, embudo, ads, plan 90 días
 │   ├── 02-calendario-30-dias.csv   # Calendario de publicaciones (ábrelo en Excel / Google Sheets)
@@ -42,10 +47,19 @@ Landing page profesional + plan completo para **vender servicios de desarrollo w
 - Planes, proceso de trabajo, testimonios y preguntas frecuentes (resuelven objeciones antes de la venta).
 - Etiquetas Open Graph para que el enlace se vea profesional al compartirlo en Facebook y WhatsApp.
 
+## 🧪 Proyectos demo
+
+| Demo | Qué muestra | Enlace |
+|---|---|---|
+| 🔥 Fogón 22 (restaurante) | Menú con buscador y categorías, carrito, envío gratis automático, domicilio/recoger, pedido a WhatsApp | `/demos/restaurante/` |
+| 🦷 Sonríe (clínica dental) | Reserva en 3 pasos, especialistas, días y horarios disponibles/ocupados, confirmación | `/demos/clinica/` |
+| 🌙 LÚA (boutique) | Catálogo con filtros y orden, vista rápida, colores y tallas con stock, favoritos, cupones (`LUA10`), checkout | `/demos/tienda/` |
+
+Cambia `DEMO_CONFIG` en `demos/demo-banner.js` con tu nombre y WhatsApp. Cada demo da material para varias publicaciones: graba la pantalla del celular usando el flujo completo.
+
 ## 🗺️ Siguientes mejoras sugeridas
 
 - [ ] Reemplazar `img/og-cover.svg` por un PNG 1200×630 (Facebook no muestra SVG en vistas previas).
 - [ ] Agregar Meta Pixel y Google Analytics 4.
-- [ ] Crear 3 proyectos demo por nicho (restaurante, clínica, tienda) en repos separados y enlazarlos.
 - [ ] Versión Laravel con formulario que guarde leads en base de datos y panel para gestionarlos.
 - [ ] Dominio propio (ej. `tunombre.dev`).
