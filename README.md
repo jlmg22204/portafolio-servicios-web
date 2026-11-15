@@ -23,7 +23,8 @@ Landing page profesional + plan completo para **vender servicios de desarrollo w
 │   ├── 02-calendario-30-dias.csv   # Calendario de publicaciones (ábrelo en Excel / Google Sheets)
 │   ├── 03-guiones-venta.md         # Bios, copys, respuestas de WhatsApp, objeciones, seguimiento
 │   ├── 04-tablero-kpis.csv         # Registro semanal de métricas
-│   └── 05-plantilla-propuesta.md   # Plantilla de cotización para clientes
+│   ├── 05-plantilla-propuesta.md   # Plantilla de cotización para clientes
+│   └── 06-precios.md               # Investigación de mercado (Chimbote/Perú) y tarifas
 └── .github/workflows/pages.yml     # Publicación automática en GitHub Pages
 ```
 
@@ -31,7 +32,7 @@ Landing page profesional + plan completo para **vender servicios de desarrollo w
 
 1. **Personaliza tus datos**
    - `js/main.js` → `CONFIG.whatsapp` con tu número en formato internacional (ej. `5215512345678`).
-   - `index.html` → reemplaza enlaces de redes (`TU_PAGINA`, `TU_USUARIO`) y precios `S/ XXX`.
+   - `index.html` → reemplaza enlaces de redes (`TU_PAGINA`, `TU_USUARIO`).
    - Sustituye los proyectos de ejemplo del portafolio y los testimonios por los reales.
 2. **Publica la web**: en GitHub → *Settings → Pages → Source: GitHub Actions*. Cada `push` a `main` actualiza el sitio en `https://jlmg22204.github.io/portafolio-servicios-web/`.
 3. **Configura tus redes** siguiendo la sección 3 de [`docs/01-plan-marketing-redes.md`](docs/01-plan-marketing-redes.md).

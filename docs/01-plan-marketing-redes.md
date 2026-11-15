@@ -188,7 +188,7 @@ La landing lee `utm_source` y `utm_campaign` y los añade automáticamente al me
 
 - **Plataforma:** Meta Ads (Facebook + Instagram) desde el Administrador de anuncios.
 - **Objetivo:** "Interacción → Mensajes de WhatsApp" (más barato y directo que tráfico web).
-- **Presupuesto inicial:** el equivalente a 3–5 USD/día durante 14 días. Evalúa y escala lo que funcione.
+- **Presupuesto inicial:** S/ 10–20 por día durante 14 días (≈ S/ 140–280 en total). Evalúa y escala lo que funcione.
 - **Segmentación:** tu ciudad + 25 km, 28–55 años, intereses: "Propietario de pequeña empresa", "Emprendimiento", "Comercio electrónico", "Restaurantes" (según nicho).
 - **Creativos:** usa tus 2 Reels con mejor retención orgánica. No hagas anuncios "bonitos": usa lo que ya funcionó.
 - **Oferta del anuncio:** la auditoría gratis o "Landing page lista en 7 días".
@@ -211,7 +211,7 @@ La landing lee `utm_source` y `utm_campaign` y los añade automáticamente al me
 - Ofrecer **plan de mantenimiento mensual** a todos los clientes (ingreso recurrente).
 
 ### Mes 3 — Escalar
-- Subir precios un 15–20% si la agenda está llena.
+- Terminar el precio de lanzamiento y pasar a los precios normales (ver `06-precios.md`).
 - Crear un "paquete por nicho" (ej. "Kit Restaurante: menú digital + pedidos + Google").
 - Colaboraciones: diseñadores, fotógrafos, community managers (te refieren, tú les refieres).
 - Revisar KPIs: duplicar lo que trae clientes, eliminar lo que no.

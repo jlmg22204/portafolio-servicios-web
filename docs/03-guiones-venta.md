@@ -94,7 +94,7 @@ Escribe "DESPEGUE" y te envío los detalles.
 > 3. ¿Ya tienes página o redes? Si es así, compárteme el enlace.
 
 **/precios**
-> Mis proyectos inician desde S/ XXX para una landing page. El precio final depende de lo que necesites, por eso prefiero hacerte una propuesta exacta, por escrito y sin compromiso. ¿Te parece si lo vemos en una llamada de 20 minutos? ¿Qué día te acomoda?
+> Este mes tengo precios de lanzamiento: una landing page está en S/ 690 (precio normal S/ 890) e incluye dominio y hosting el primer año. Un sitio completo o tienda en línea está en S/ 1,890. El precio final depende de lo que necesites, por eso prefiero hacerte una propuesta exacta, por escrito y sin compromiso. ¿Te parece si lo vemos en una llamada de 20 minutos? ¿Qué día te acomoda?
 
 **/proceso**
 > Así trabajo:
@@ -115,7 +115,7 @@ Escribe "DESPEGUE" y te envío los detalles.
 Pregunta siempre:
 1. ¿Qué problema quieres resolver?
 2. ¿Para cuándo lo necesitas?
-3. ¿Tienes un presupuesto aproximado? *(ofrece rangos: "mis proyectos van de S/ X a S/ Y, ¿en qué rango te sientes cómodo?")*
+3. ¿Tienes un presupuesto aproximado? *(ofrece rangos: "mis proyectos van de S/ 690 a S/ 3,500, ¿en qué rango te sientes cómodo?")*
 4. ¿Quién más participa en la decisión?
 
 Si no hay problema claro, ni fecha, ni presupuesto → no inviertas horas en una propuesta; envía el plan básico y sigue nutriendo con contenido.
@@ -139,7 +139,7 @@ Si no hay problema claro, ni fecha, ni presupuesto → no inviertas horas en una
 
 | Objeción | Respuesta |
 |---|---|
-| "Está caro" | "Entiendo. ¿Comparado con qué? Una página que te consigue 2 clientes al mes se paga sola. También puedo empezar con una versión más pequeña y crecer después." |
+| "Está caro" / "En otro lado me cobran S/ 499" | "Entiendo. ¿Comparado con qué? Muchas ofertas baratas usan plantillas que no puedes hacer crecer. Yo programo tu web a medida y queda 100% a tu nombre. Una página que te consigue 2 clientes al mes se paga sola. También puedo empezar con una versión más pequeña y crecer después." |
 | "Con Wix lo hago yo" | "¡Claro que puedes! La diferencia es tu tiempo y el resultado: yo me encargo de que cargue rápido, aparezca en Google y esté hecha para vender. Tú te enfocas en tu negocio." |
 | "Lo voy a pensar" | "Perfecto. ¿Qué parte te gustaría pensar? A veces puedo ajustar el alcance o la forma de pago." |
 | "Mi sobrino me la hace" | "¡Excelente! Si en algún momento necesitas soporte o algo más avanzado, aquí estoy." |

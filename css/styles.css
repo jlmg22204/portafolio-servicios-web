@@ -207,3 +207,14 @@ details p { color: var(--muted); margin-top: .7rem; }
 a.project__img { text-align: center; padding: 1rem; }
 .demo-link { display: inline-block; margin-top: 1rem; color: var(--accent); font-weight: 600; font-size: .92rem; }
 .demo-link:hover { text-decoration: underline; }
+
+/* ---------- Precios ---------- */
+.price s { color: var(--muted); font-size: 1rem; margin-right: .3rem; }
+.badge--launch { left: 20px; right: auto; background: #f59e0b; color: #1c1917; }
+.maint { margin-top: 2rem; background: var(--card); border: 1px dashed rgba(34, 211, 238, .35); border-radius: var(--radius); padding: 1.6rem 1.8rem; }
+.maint h3 { font-size: 1.15rem; margin-bottom: .8rem; }
+.maint h3 span { color: var(--muted); font-weight: 400; font-size: .95rem; }
+.maint ul { list-style: none; display: grid; gap: .4rem; margin-bottom: .8rem; }
+.maint li { font-size: .95rem; color: var(--muted); }
+.maint li strong { color: var(--text); }
+.maint p { color: var(--muted); font-size: .88rem; }
