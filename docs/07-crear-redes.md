@@ -9,7 +9,7 @@ Imágenes listas en la carpeta [`marca/`](../marca):
 | `marca/portadas/facebook-portada-1640x856.png` | Portada de la página de Facebook |
 | `marca/portadas/linkedin-banner-1584x396.png` | Banner de LinkedIn |
 | `marca/destacadas/*.png` | Portadas de historias destacadas de Instagram |
-| `marca/publicaciones/*.png` | Tus primeras 4 publicaciones (la 04 es un carrusel de 7 imágenes) |
+| `marca/publicaciones/*.png` | Tus primeras 5 publicaciones (la 04 es un carrusel de 7 imágenes) |
 
 ---
 
@@ -45,6 +45,7 @@ Si usas tu número `913 718 392` en WhatsApp normal, puedes migrarlo a WhatsApp 
    | Landing page · Plan Despegue | S/ 690 | 1 página, WhatsApp, formulario, SEO, dominio y hosting 1er año. Entrega en 7 días. |
    | Sitio web o Tienda · Plan Negocio | S/ 1,890 | Hasta 8 páginas o 50 productos, panel propio, Yape/Plin, dominio y hosting 1er año. |
    | Sistema a medida | Desde S/ 3,500 | Citas, inventario, ventas, transporte. Pagos por etapa. |
+   | Automatización Google (Apps Script) | Desde S/ 350 | Reportes, PDFs, correos y recordatorios automáticos en Google Sheets, Forms, Gmail y Drive. |
 4. **Mensaje de bienvenida** (Herramientas → Mensaje de bienvenida):
    ```
    ¡Hola! 👋 Soy José de JM Dev. Gracias por escribir. Cuéntame: ¿qué negocio tienes y qué te gustaría lograr con tu página? Te respondo en breve.
@@ -67,7 +68,7 @@ Necesitas tu perfil personal de Facebook para crearla, pero la página es indepe
    - Categoría: `Diseñador de sitios web` (agrega también `Desarrollador de software`)
    - Biografía (máx. 255 caracteres):
      ```
-     Creo páginas web, tiendas en línea y sistemas a medida que hacen crecer tu negocio. 10 años de experiencia · Laravel · Trato directo. 📍 Chimbote 💬 913 718 392
+     Creo páginas web, tiendas en línea y sistemas a medida que hacen crecer tu negocio. 10 años de experiencia · Laravel · Google Apps Script · Trato directo. 📍 Chimbote 💬 913 718 392
      ```
 2. **Foto de perfil**: `logo-perfil-1080.png` · **Portada**: `facebook-portada-1640x856.png`.
 3. **Usuario**: Configuración → `@jmdev.pe` (así tu página queda en `facebook.com/jmdev.pe`).
@@ -94,6 +95,7 @@ Necesitas tu perfil personal de Facebook para crearla, pero la página es indepe
      ```
      💻 Desarrollador Web Full Stack · 10 años
      🚀 Webs, tiendas y sistemas que venden
+     📊 Automatizo tu Google Sheets
      📍 Chimbote · Atiendo todo Perú
      🎉 Webs desde S/ 690 👇
      ```
@@ -140,7 +142,7 @@ Es **gratis** y muchos negocios de Chimbote te encontrarán buscando "páginas w
 2. **Banner**: `linkedin-banner-1584x396.png`.
 3. **Titular**:
    ```
-   Desarrollador Web Full Stack | Laravel · PHP · JavaScript | Ayudo a negocios a vender y automatizar con software a medida
+   Desarrollador Web Full Stack | Laravel · PHP · JavaScript · Google Apps Script | Ayudo a negocios a vender y automatizar con software a medida
    ```
 4. **Acerca de**: copia el texto de LinkedIn de [`03-guiones-venta.md`](03-guiones-venta.md#1-bios-listas-para-copiar).
 5. **Experiencia**: `Fundador · JM Dev` (desde noviembre 2026) + tus trabajos anteriores de estos 10 años.
@@ -212,7 +214,25 @@ Guarda este post para revisarlo después 📌
 #PaginaWeb #MarketingDigital #Emprendedores #Chimbote #NegociosLocales #Peru
 ```
 
-Desde el día 5, sigue el calendario de [`02-calendario-30-dias.csv`](02-calendario-30-dias.csv).
+**Día 5 — `05-apps-script.png`** (nuevo servicio)
+```
+¿Todavía haces tus reportes a mano? 😩
+
+Tu Google Sheets puede trabajar solo:
+📊 Reportes de ventas automáticos en tu correo cada lunes
+📄 Cotizaciones y boletas en PDF con un clic
+⏰ Recordatorios automáticos a tus clientes
+📦 Alertas cuando se te acaba el stock
+
+Lo hago con Google Apps Script: sin pagar servidor ni licencias.
+Automatizaciones desde S/ 350.
+
+Escríbeme "AUTOMATIZAR" y te digo qué tarea de tu negocio puedo hacer automática. 💬
+
+#GoogleSheets #AppsScript #Automatizacion #Excel #Productividad #Chimbote #Pymes
+```
+
+Desde el día 6, sigue el calendario de [`02-calendario-30-dias.csv`](02-calendario-30-dias.csv).
 
 ---
 

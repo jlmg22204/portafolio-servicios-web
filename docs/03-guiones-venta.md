@@ -10,7 +10,7 @@ Adapta el tono a tu forma de hablar. Lo importante es la estructura.
 ```
 💻 Desarrollador Web Full Stack
 🚀 Páginas web, tiendas y sistemas que hacen crecer tu negocio
-⚙️ Laravel · PHP · JavaScript
+⚙️ Laravel · PHP · JavaScript · Google Apps Script
 👇 Cotiza gratis por WhatsApp
 ```
 
@@ -18,7 +18,7 @@ Adapta el tono a tu forma de hablar. Lo importante es la estructura.
 > Ayudo a negocios y emprendedores a vender en internet con páginas web, tiendas en línea y sistemas a medida. Trato directo con el programador, precio cerrado, avances semanales y soporte después del lanzamiento. Escríbeme por WhatsApp para una cotización sin compromiso.
 
 **LinkedIn (Acerca de)**
-> Desarrollador Web Full Stack independiente (HTML, CSS, JavaScript, PHP, Laravel). Construyo soluciones web que generan resultados medibles: más ventas, menos trabajo manual y mejor presencia en Google. He desarrollado sitios corporativos, tiendas en línea, sistemas de inventario, agendas de citas e integraciones con APIs. Si tu empresa tiene un proceso que se hace en Excel o en papel, probablemente pueda automatizarlo.
+> Desarrollador Web Full Stack independiente (HTML, CSS, JavaScript, PHP, Laravel y Google Apps Script). Construyo soluciones web que generan resultados medibles: más ventas, menos trabajo manual y mejor presencia en Google. He desarrollado sitios corporativos, tiendas en línea, sistemas de inventario, agendas de citas e integraciones con APIs. Si tu empresa tiene un proceso que se hace en Excel o en papel, probablemente pueda automatizarlo: también desarrollo automatizaciones en Google Workspace (Sheets, Forms, Gmail, Drive y Calendar) con Apps Script.
 
 ---
 
@@ -38,6 +38,22 @@ Adapta el tono a tu forma de hablar. Lo importante es la estructura.
 ---
 
 ## 3. Textos (copys) para publicaciones
+
+**Automatización con Google Apps Script**
+```
+¿Todavía haces tus reportes a mano en Excel? 😩
+
+Con Google Apps Script tu Google Sheets puede:
+📊 Enviarte un reporte de ventas cada lunes por correo
+📄 Generar cotizaciones y boletas en PDF con un clic
+⏰ Mandar recordatorios automáticos a tus clientes
+📦 Avisarte cuando un producto se está acabando
+
+Sin pagar servidor ni licencias. Automatizaciones desde S/ 350.
+Escríbeme "AUTOMATIZAR" y vemos qué tarea te ahorro. 💬
+#GoogleSheets #AppsScript #Automatizacion #Productividad #Chimbote #Pymes
+```
+
 
 **Portafolio (formato Reto → Solución → Resultado)**
 ```

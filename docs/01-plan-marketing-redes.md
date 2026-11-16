@@ -24,6 +24,7 @@
 - Tiendas que hoy venden solo por Instagram (tienda en línea)
 - Ferreterías / comercios (inventario y punto de venta)
 - Despachos y profesionistas (sitio + SEO local)
+- Negocios que viven en Excel o Google Sheets (automatización con Apps Script: reportes, cotizaciones en PDF, inventario). Es tu **servicio de entrada**: precio bajo, entrega en días, y abre la puerta a un sistema completo.
 
 ---
 

@@ -40,6 +40,15 @@ La mayoría de estas ofertas usan **plantillas de WordPress o constructores**, n
 | Negocio (sitio o tienda) | S/ 2,490 | **S/ 1,890** | Hasta 8 páginas o 50 productos, panel Laravel, Yape/Plin/tarjeta, correos, dominio + hosting 1er año |
 | A medida (sistemas) | desde S/ 4,500 | **desde S/ 3,500** | Citas, inventario, POS, transporte; pagos por etapa |
 
+**Automatizaciones con Google Apps Script** (servicio de entrada: ticket bajo, entrega rápida y suele llevar a proyectos más grandes)
+| Servicio | Precio | Ejemplos |
+|---|---|---|
+| Automatización simple (1 proceso) | **S/ 350** | Forms → Sheets → correo de confirmación; cotización en PDF desde una fila; recordatorios de Calendar |
+| Paquete de 3 automatizaciones / reporte automático | **S/ 600** | Reporte semanal de ventas con gráficos por Gmail; alertas de stock bajo |
+| Sistema en Google Sheets o app web Apps Script | **desde S/ 900** | Inventario, cotizaciones, asistencia de personal, control de pedidos con menú propio |
+
+Se calcula con tu tarifa de S/ 40/hora (≈ 8–9 h para la simple). El cliente no paga servidor: corre en su cuenta de Google. Ten en cuenta las cuotas diarias de Google (envío de correos, tiempo de ejecución) al cotizar procesos grandes.
+
 **Recurrentes**
 | Servicio | Precio |
 |---|---|
