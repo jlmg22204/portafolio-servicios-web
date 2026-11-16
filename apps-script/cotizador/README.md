@@ -45,6 +45,18 @@ Demo simulada (para mostrar en redes): `demos/cotizador/` del sitio.
 - El cliente **no paga servidor**: corre en su propia cuenta de Google.
 - Precio sugerido: **S/ 600** (paquete de 3 automatizaciones: cotización en PDF, reenvío y reporte semanal) o **desde S/ 900** si incluye inventario o más hojas.
 
+## Problemas frecuentes
+
+| Mensaje / síntoma | Solución |
+|---|---|
+| "Google no verificó esta app" | Normal en scripts propios: *Configuración avanzada → Ir a Cotizador (no seguro) → Permitir*. |
+| `Falta la hoja "Productos"` | No se ejecutó `configurarHoja`. Ejecútala desde el editor. |
+| `No HTML file named Index/Pdf was found` | Los archivos HTML deben llamarse exactamente `Index` y `Pdf` (sin `.html`, con mayúscula). |
+| La app web muestra "Necesitas permiso" | En la implementación, "Quién tiene acceso" debe ser **Cualquier usuario**. |
+| Cambié el código y la app web no cambia | *Implementar → Gestionar implementaciones → ✏️ → Versión: Nueva versión → Implementar*. La URL se mantiene. |
+| No aparece el menú ⚙️ Cotizador | Recarga la hoja (F5) y espera unos segundos. |
+| No llega el correo | Revisa Spam y la cuota diaria de correos. Mira el error en *Ejecuciones* (ícono ☰▶ del editor). |
+
 ## Límites a tener en cuenta
 
 - Cuota de correos de Google: ~100 destinatarios/día con cuenta gratuita de Gmail y ~1,500/día con Google Workspace.

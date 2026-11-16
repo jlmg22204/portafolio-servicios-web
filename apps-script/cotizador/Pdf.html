@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <style>
     body { font-family: Arial, sans-serif; color: #1f2937; font-size: 12px; margin: 32px; }
-    .head { display: flex; justify-content: space-between; border-bottom: 3px solid #0f9d58; padding-bottom: 12px; }
+    .head { width: 100%; border-collapse: collapse; border-bottom: 3px solid #0f9d58; margin: 0; }
+    .head td { border: 0; padding: 0 0 12px; vertical-align: top; }
     .emp { font-size: 20px; font-weight: bold; color: #0b1020; }
     .muted { color: #6b7280; }
     .box { border: 1px solid #0f9d58; border-radius: 6px; padding: 8px 14px; text-align: center; }
@@ -13,20 +14,23 @@
     th { background: #0b1020; color: #fff; text-align: left; padding: 8px; font-size: 11px; }
     td { padding: 8px; border-bottom: 1px solid #e5e7eb; }
     .r { text-align: right; }
-    .tot { width: 260px; margin-left: auto; margin-top: 14px; }
+    .tot { width: 260px; margin: 14px 0 0 auto; }
     .tot td { border: 0; padding: 4px 8px; }
     .tot .g td { font-size: 15px; font-weight: bold; border-top: 2px solid #0b1020; }
     .foot { margin-top: 36px; font-size: 10px; color: #6b7280; border-top: 1px solid #e5e7eb; padding-top: 10px; }
   </style>
 </head>
 <body>
-  <div class="head">
-    <div>
-      <div class="emp"><?= cfg.empresa ?></div>
-      <div class="muted">RUC <?= cfg.ruc ?> · <?= cfg.direccion ?> · Tel. <?= cfg.telefono ?></div>
-    </div>
-    <div class="box">COTIZACIÓN<b><?= cot.numero ?></b></div>
-  </div>
+  <!-- Tabla en lugar de flexbox: el convertidor HTML→PDF de Google no soporta flex -->
+  <table class="head">
+    <tr>
+      <td>
+        <div class="emp"><?= cfg.empresa ?></div>
+        <div class="muted">RUC <?= cfg.ruc ?> · <?= cfg.direccion ?> · Tel. <?= cfg.telefono ?></div>
+      </td>
+      <td style="width:150px"><div class="box">COTIZACIÓN<b><?= cot.numero ?></b></div></td>
+    </tr>
+  </table>
 
   <p>
     <b>Cliente:</b> <?= cot.cliente ?> &nbsp;·&nbsp; <b>DNI/RUC:</b> <?= cot.documento ?><br>
