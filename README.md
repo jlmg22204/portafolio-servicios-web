@@ -26,6 +26,7 @@ Landing page profesional + plan completo para **vender servicios de desarrollo w
 │   ├── 05-plantilla-propuesta.md   # Plantilla de cotización para clientes
 │   ├── 06-precios.md               # Investigación de mercado (Chimbote/Perú) y tarifas
 │   └── 07-crear-redes.md           # Guía paso a paso para crear cada red + primeras publicaciones
+├── apps-script/cotizador/          # Código real de Google Apps Script (instalable en tu cuenta de Google)
 ├── marca/                          # Logo, portadas, destacadas y publicaciones listas para subir
 └── .github/workflows/pages.yml     # Publicación automática en GitHub Pages
 ```
@@ -57,6 +58,7 @@ Landing page profesional + plan completo para **vender servicios de desarrollo w
 | 🔥 Fogón 22 (restaurante) | Carta peruana con buscador y categorías, carrito, envío gratis automático, delivery/recojo, pedido a WhatsApp | `/demos/restaurante/` |
 | 🦷 Sonríe (clínica dental) | Reserva en 3 pasos, especialistas, días y horarios disponibles/ocupados, confirmación | `/demos/clinica/` |
 | 🌙 LÚA (boutique) | Catálogo con filtros y orden, vista rápida, colores y tallas con stock, favoritos, cupones (`LUA10`), checkout | `/demos/tienda/` |
+| 📊 Cotizador (Apps Script) | Formulario → Google Sheets → PDF con IGV → Gmail; simulación en la web y código real instalable | `/demos/cotizador/` · código en `apps-script/cotizador/` |
 
 Cambia `DEMO_CONFIG` en `demos/demo-banner.js` con tu nombre y WhatsApp. Cada demo da material para varias publicaciones: graba la pantalla del celular usando el flujo completo.
 

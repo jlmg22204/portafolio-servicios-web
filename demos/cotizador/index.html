@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotizador automático · Google Apps Script | Demo</title>
+  <meta name="description" content="Demo: cotizador que guarda en Google Sheets, genera el PDF y lo envía por Gmail automáticamente con Google Apps Script.">
+  <meta property="og:title" content="Cotizador automático con Google Sheets">
+  <meta property="og:description" content="Formulario → Google Sheets → PDF → Gmail, sin servidor. Proyecto demo.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap">
+      <span class="pill">📊 Google Apps Script</span>
+      <h1>Cotizaciones automáticas en <span class="hl">10 segundos</span></h1>
+      <p>Tu cliente llena el formulario y, sin que toques nada, la cotización se <b>guarda en Google Sheets</b>, se <b>genera en PDF</b> y le <b>llega por correo</b>. Todo corre en tu cuenta de Google: sin pagar servidor.</p>
+      <ol class="flow" aria-label="Flujo">
+        <li><span>📝</span>Formulario</li>
+        <li><span>📊</span>Google Sheets</li>
+        <li><span>📄</span>PDF en Drive</li>
+        <li><span>✉️</span>Gmail</li>
+      </ol>
+    </div>
+  </header>
+
+  <main class="wrap app">
+    <!-- Formulario -->
+    <section class="panel form-panel">
+      <h2>1. Solicita una cotización</h2>
+      <p class="hint">Ejemplo: <b>Ferretería El Puerto</b> · Chimbote</p>
+      <form id="form" novalidate>
+        <label>Nombre o razón social<input name="cliente" required autocomplete="name" placeholder="Constructora Los Pinos SAC"></label>
+        <div class="row">
+          <label>DNI o RUC<input name="documento" required inputmode="numeric" placeholder="20601234567"></label>
+          <label>Teléfono<input name="telefono" inputmode="tel" placeholder="987 654 321"></label>
+        </div>
+        <label>Correo<input name="correo" type="email" required placeholder="compras@empresa.pe"></label>
+        <div class="prods-head"><span>Productos</span><span>Cant.</span></div>
+        <div id="prods" class="prods"></div>
+        <div class="total"><span>Total (inc. IGV)</span><strong id="total">S/ 0.00</strong></div>
+        <p class="error" id="error" role="alert"></p>
+        <button class="btn" id="submit">Generar y enviar cotización</button>
+        <button type="button" class="link" id="fill">Rellenar con datos de ejemplo</button>
+      </form>
+    </section>
+
+    <!-- Resultado -->
+    <section class="panel out-panel">
+      <div class="steps" id="steps" hidden>
+        <p data-s="1"><i></i>Guardando en Google Sheets…</p>
+        <p data-s="2"><i></i>Generando PDF en Google Drive…</p>
+        <p data-s="3"><i></i>Enviando correo con Gmail…</p>
+      </div>
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="sheet" role="tab">📊 Google Sheets</button>
+        <button class="tab" data-tab="pdf" role="tab">📄 PDF</button>
+        <button class="tab" data-tab="mail" role="tab">✉️ Gmail</button>
+        <button class="tab" data-tab="code" role="tab">&lt;/&gt; Código</button>
+      </div>
+
+      <!-- Sheets -->
+      <div class="view" data-view="sheet">
+        <div class="gs">
+          <div class="gs__bar"><span class="gs__logo">▦</span> Cotizador – Ferretería El Puerto <span class="gs__menu">⚙️ Cotizador ▾</span></div>
+          <div class="gs__scroll">
+            <table class="gs__table">
+              <thead><tr><th></th><th>A<br>N°</th><th>B<br>Fecha</th><th>C<br>Cliente</th><th>D<br>DNI/RUC</th><th>E<br>Total</th><th>F<br>PDF</th><th>G<br>Estado</th></tr></thead>
+              <tbody id="sheet-body"></tbody>
+            </table>
+          </div>
+          <div class="gs__tabs"><span class="on">Cotizaciones</span><span>Productos</span></div>
+        </div>
+        <div class="kpis">
+          <div><small>Cotizaciones</small><b id="k-count">0</b></div>
+          <div><small>Monto cotizado</small><b id="k-sum">S/ 0</b></div>
+          <div><small>Ticket promedio</small><b id="k-avg">S/ 0</b></div>
+        </div>
+        <button class="link" id="reset">Borrar datos del demo</button>
+      </div>
+
+      <!-- PDF -->
+      <div class="view" data-view="pdf" hidden>
+        <div id="pdf-empty" class="empty">Genera una cotización para ver el PDF.</div>
+        <div id="pdf-wrap" hidden>
+          <div class="pdf" id="pdf"></div>
+          <button class="btn btn--ghost" id="print">⬇️ Descargar PDF</button>
+        </div>
+      </div>
+
+      <!-- Gmail -->
+      <div class="view" data-view="mail" hidden>
+        <div id="mail-empty" class="empty">Genera una cotización para ver el correo enviado.</div>
+        <div class="mail" id="mail" hidden></div>
+      </div>
+
+      <!-- Código -->
+      <div class="view" data-view="code" hidden>
+        <p class="hint">Fragmento real del script. El proyecto completo (formulario, plantilla PDF, menú y reporte semanal) está en GitHub.</p>
+<pre class="code"><code><span class="c">// Code.gs — se ejecuta al enviar el formulario</span>
+<span class="k">function</span> <span class="f">crearCotizacion</span>(datos) {
+  <span class="f">validar_</span>(datos);
+  <span class="k">const</span> total = <span class="f">calcularTotal_</span>(datos.items);
+  <span class="k">const</span> numero = <span class="s">'COT-'</span> + <span class="f">siguienteNumero_</span>();
+
+  <span class="c">// 1. Guardar en Google Sheets</span>
+  hoja.<span class="f">appendRow</span>([numero, <span class="k">new</span> <span class="f">Date</span>(), datos.cliente, total]);
+
+  <span class="c">// 2. Generar el PDF en Drive</span>
+  <span class="k">const</span> pdf = carpeta.<span class="f">createFile</span>(
+    Utilities.<span class="f">newBlob</span>(html, <span class="s">'text/html'</span>).<span class="f">getAs</span>(<span class="s">'application/pdf'</span>));
+
+  <span class="c">// 3. Enviarlo por Gmail</span>
+  MailApp.<span class="f">sendEmail</span>({ to: datos.correo, subject: <span class="s">`Cotización ${numero}`</span>,
+    htmlBody: cuerpo, attachments: [pdf.<span class="f">getAs</span>(MimeType.PDF)] });
+}</code></pre>
+        <a class="btn btn--ghost" href="https://github.com/jlmg22204/portafolio-servicios-web/tree/main/apps-script/cotizador" target="_blank" rel="noopener">Ver el código completo en GitHub →</a>
+      </div>
+    </section>
+  </main>
+
+  <section class="wrap uses">
+    <h2>¿Para qué negocios sirve?</h2>
+    <div class="use-grid">
+      <div>🔩 Ferreterías y distribuidoras</div><div>🖨️ Imprentas y publicidad</div><div>🚚 Transporte y mudanzas</div>
+      <div>🎉 Eventos y catering</div><div>🔧 Talleres y servicios técnicos</div><div>🏗️ Constructoras</div>
+    </div>
+    <p class="cta">Automatizaciones con Google desde <b>S/ 350</b> · <a href="../../index.html#planes">Ver planes</a></p>
+  </section>
+
+  <footer class="foot">Sitio de demostración · En este demo nada se envía realmente: la versión instalada usa tu Google Sheets, Drive y Gmail.</footer>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="../demo-banner.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

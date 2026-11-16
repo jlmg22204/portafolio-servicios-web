@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: Arial, sans-serif; color: #1f2937; font-size: 12px; margin: 32px; }
+    .head { display: flex; justify-content: space-between; border-bottom: 3px solid #0f9d58; padding-bottom: 12px; }
+    .emp { font-size: 20px; font-weight: bold; color: #0b1020; }
+    .muted { color: #6b7280; }
+    .box { border: 1px solid #0f9d58; border-radius: 6px; padding: 8px 14px; text-align: center; }
+    .box b { display: block; font-size: 16px; color: #0f9d58; }
+    table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+    th { background: #0b1020; color: #fff; text-align: left; padding: 8px; font-size: 11px; }
+    td { padding: 8px; border-bottom: 1px solid #e5e7eb; }
+    .r { text-align: right; }
+    .tot { width: 260px; margin-left: auto; margin-top: 14px; }
+    .tot td { border: 0; padding: 4px 8px; }
+    .tot .g td { font-size: 15px; font-weight: bold; border-top: 2px solid #0b1020; }
+    .foot { margin-top: 36px; font-size: 10px; color: #6b7280; border-top: 1px solid #e5e7eb; padding-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="head">
+    <div>
+      <div class="emp"><?= cfg.empresa ?></div>
+      <div class="muted">RUC <?= cfg.ruc ?> · <?= cfg.direccion ?> · Tel. <?= cfg.telefono ?></div>
+    </div>
+    <div class="box">COTIZACIÓN<b><?= cot.numero ?></b></div>
+  </div>
+
+  <p>
+    <b>Cliente:</b> <?= cot.cliente ?> &nbsp;·&nbsp; <b>DNI/RUC:</b> <?= cot.documento ?><br>
+    <b>Correo:</b> <?= cot.correo ?> &nbsp;·&nbsp; <b>Teléfono:</b> <?= cot.telefono ?><br>
+    <b>Fecha:</b> <?= fechaTxt ?> &nbsp;·&nbsp; <b>Válida hasta:</b> <?= venceTxt ?>
+  </p>
+
+  <table>
+    <tr><th>Código</th><th>Descripción</th><th class="r">Cant.</th><th class="r">P. unit.</th><th class="r">Importe</th></tr>
+    <? for (const i of cot.items) { ?>
+    <tr>
+      <td><?= i.codigo ?></td><td><?= i.nombre ?></td>
+      <td class="r"><?= i.cantidad ?></td><td class="r"><?= fmt(i.precio) ?></td><td class="r"><?= fmt(i.importe) ?></td>
+    </tr>
+    <? } ?>
+  </table>
+
+  <table class="tot">
+    <tr><td>Op. gravada</td><td class="r"><?= fmt(cot.subtotal) ?></td></tr>
+    <tr><td>IGV (18%)</td><td class="r"><?= fmt(cot.igv) ?></td></tr>
+    <tr class="g"><td>TOTAL</td><td class="r"><?= fmt(cot.total) ?></td></tr>
+  </table>
+
+  <div class="foot">
+    Precios incluyen IGV. Cotización válida por <?= cfg.vigenciaDias ?> días, sujeta a stock.
+    Documento generado automáticamente con Google Apps Script.
+  </div>
+</body>
+</html>

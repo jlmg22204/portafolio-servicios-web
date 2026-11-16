@@ -225,6 +225,7 @@ Tu Google Sheets puede trabajar solo:
 📦 Alertas cuando se te acaba el stock
 
 Lo hago con Google Apps Script: sin pagar servidor ni licencias.
+Prueba el demo de cotizador automático: link en la bio 👆
 Automatizaciones desde S/ 350.
 
 Escríbeme "AUTOMATIZAR" y te digo qué tarea de tu negocio puedo hacer automática. 💬
