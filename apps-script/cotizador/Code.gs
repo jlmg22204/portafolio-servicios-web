@@ -15,6 +15,7 @@ const CONFIG = {
   correoCopia: '',          // correo que recibe copia de cada cotización (opcional)
   igv: 0.18,
   vigenciaDias: 7,
+  maxPorDia: 30,            // tope de cotizaciones por día (protege tu cuenta si el enlace es público)
   carpetaPdf: 'Cotizaciones PDF',
   hojaProductos: 'Productos',
   hojaCotizaciones: 'Cotizaciones',
@@ -53,6 +54,7 @@ function crearCotizacion(datos) {
   lock.waitLock(20000); // evita números duplicados si dos personas cotizan a la vez
   try {
     validar_(datos);
+    controlarLimite_();
     const catalogo = Object.fromEntries(getProductos().map((p) => [p.codigo, p]));
     const items = datos.items
       .filter((i) => catalogo[i.codigo] && Number(i.cantidad) > 0)
@@ -244,6 +246,18 @@ function carpeta_() {
   const carpeta = DriveApp.createFolder(CONFIG.carpetaPdf);
   props.setProperty('CARPETA_ID', carpeta.getId());
   return carpeta;
+}
+
+/** Evita abusos: máximo CONFIG.maxPorDia cotizaciones al día y respeta la cuota de correos de Google. */
+function controlarLimite_() {
+  const props = PropertiesService.getScriptProperties();
+  const hoy = Utilities.formatDate(new Date(), 'America/Lima', 'yyyy-MM-dd');
+  const [dia, usados] = (props.getProperty('LIMITE') || '').split('|');
+  const n = dia === hoy ? Number(usados) : 0;
+  if (n >= CONFIG.maxPorDia || MailApp.getRemainingDailyQuota() < 5) {
+    throw new Error('Se alcanzó el límite de cotizaciones de hoy. Escríbenos por WhatsApp al ' + CONFIG.telefono + '.');
+  }
+  props.setProperty('LIMITE', hoy + '|' + (n + 1));
 }
 
 function validar_(d) {

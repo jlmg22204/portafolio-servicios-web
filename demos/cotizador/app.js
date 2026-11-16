@@ -11,6 +11,8 @@ const PRODUCTOS = [
   { codigo: 'CAL-ZN', nombre: 'Calamina zincada 0.25 mm x 3.6 m', precio: 27.5 },
   { codigo: 'CLA-03', nombre: 'Clavos de 3" (kg)', precio: 7.5 },
 ];
+// URL de la app web real (Implementar → URL que termina en /exec). Vacío = botón oculto.
+const REAL_URL = '';
 const IGV = 0.18, VIGENCIA = 7, KEY = 'cotizador-demo';
 const SEED = [
   { numero: 'COT-0001', fecha: '2026-11-10T09:12', cliente: 'Inversiones Santa Rosa EIRL', documento: '20612345671', total: 1840.5 },
@@ -158,4 +160,5 @@ document.addEventListener('click', (e) => {
 $('#print').addEventListener('click', () => window.print());
 $('#reset').addEventListener('click', () => { rows = SEED.slice(); save(); renderSheet(); toast('Datos del demo reiniciados'); });
 
+if (REAL_URL) { const b = $('#real'); b.href = REAL_URL; b.hidden = false; }
 renderProds(); renderSheet();
