@@ -12,7 +12,7 @@ const PRODUCTOS = [
   { codigo: 'CLA-03', nombre: 'Clavos de 3" (kg)', precio: 7.5 },
 ];
 // URL de la app web real (Implementar → URL que termina en /exec). Vacío = botón oculto.
-const REAL_URL = '';
+const REAL_URL = 'https://script.google.com/macros/s/AKfycbwd1faIW5MPbyVzEBD_w8VC3zPSdWMgT9imWtk0XTt2iUR2CIJ_xOVxHjv2FM1qzD9h/exec';
 const IGV = 0.18, VIGENCIA = 7, KEY = 'cotizador-demo';
 const SEED = [
   { numero: 'COT-0001', fecha: '2026-11-10T09:12', cliente: 'Inversiones Santa Rosa EIRL', documento: '20612345671', total: 1840.5 },
